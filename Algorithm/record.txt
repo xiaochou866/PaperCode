@@ -1,0 +1,30 @@
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
+from myAlgorithm3 import getMultiGranleClusterByKeamns, getGranules
+
+path = '../DataSet_TEST/{}.csv'.format("Sonar")
+data = np.loadtxt(path, delimiter=",", skiprows=1)
+
+X = data[:, :-1]
+X = MinMaxScaler().fit_transform(X)  # 归一化取值均归为0-1之间
+Y = data[:, -1]
+Y = Y.astype(int)
+sampleNum, attrNum = X.shape
+
+clusterNums, granuleSampleNumThresholds = getGranules(X.shape[0])  # 生成多个粒度用于后序生成多个粒度下的聚类结果 [45, 23, 14, 11, 9] [4, 8, 13, 17, 22]
+ret = getMultiGranleClusterByKeamns(X, Y, [0], clusterNums, granuleSampleNumThresholds)
+
+thread_pool = ThreadPoolExecutor(max_workers=10)  # 初始化线程池
+thread_mission_list = []  # 用来记录线程的任务对象
+for i in range(attrNum):
+    run_thread = thread_pool.submit(getMultiGranleClusterByKeamns, X, Y, [i], clusterNums, granuleSampleNumThresholds)  # 多个参数像这样直接传递即可
+    thread_mission_list.append(run_thread)
+
+res = 0
+for mission in as_completed(thread_mission_list):  # 这里会等待线程执行完毕，先完成的会先显示出来
+    res = mission.result()
+    print(res)
+
+
