@@ -6,7 +6,7 @@ from sklearn import preprocessing
 from util.ReductUtil import *  # 求取属性约简常用的一些函数
 import time
 
-
+# reductionUseSimilarity
 
 def getTwoAttrKnowledgeDistance(sampleNum: int, neighborRelation1: list[np.ndarray],
                                 neighborRelation2: list[np.ndarray]) -> float:

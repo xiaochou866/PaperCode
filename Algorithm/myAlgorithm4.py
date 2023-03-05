@@ -1,3 +1,5 @@
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 import numpy as np
 import warnings
 from sklearn.cluster import KMeans
@@ -35,10 +37,13 @@ def getmultiClusterStrucScore(multiClusterStrucArr: list[np.ndarray], Y: np.ndar
     for i in range(n):
         yPred = getYPred(Y, multiClusterStrucArr[i])
         scores[i] = getClusterPurity(Y, yPred)
-    # print(scores)
     finScore = sum(scores) / n
     # TODO: 这里可以选择直接将scores数组进行返回然后指定某一个属性集得分优于另一个属性集得分的策略
     return finScore
+
+def chechScoreIsBetter(score1: list[float], score2: list[float])->bool:
+    # 如果得分数组中score1 中5个值中有3个值 比得分数组score2 的高 就认为score1优于score2
+    print()
 # endregion
 
 
@@ -186,31 +191,13 @@ def getMultiGranleClusterByKeamns(X: np.ndarray, Y: np.ndarray, attrSet: list[in
 
         multiClusterStrucArr.append(clusters.copy())
         multiClusterSampleNumArr.append(clusterSampleNums.copy())
-    return multiClusterStrucArr, multiClusterSampleNumArr
+
+        multiClusterStrucScore = getmultiClusterStrucScore(multiClusterStrucArr, Y)
+    return multiClusterStrucArr, multiClusterSampleNumArr, multiClusterStrucScore
+
 # endregion
 
 # region 属性集变化调整样本的分配从而调整聚类结果中的各个簇
-def checkTwoClusterEquals(cluster1: np.ndarray, cluster2: np.ndarray) -> bool:
-    '''
-    :param cluster1: 前一种聚类中的一个簇
-    :param cluster2: 后一种聚类结果中的一个簇
-    :return: 只有当这两个簇中的样本数量一致并且相同的时候返回true
-    '''
-    if len(cluster1) != len(cluster2):
-        return False
-    cluster1.sort()
-    cluster2.sort()
-    return (cluster1 == cluster2).all()
-
-
-def checkTwoClustersEquals(clusters1: list[np.ndarray], clusters2: list[np.ndarray]) -> bool:
-    if len(clusters1) != len(clusters2):
-        return False
-    n = len(clusters1)
-    for i in range(n):
-        if not checkTwoClusterEquals(clusters1[i], clusters2[i]):
-            return False
-    return True
 
 def generateCentroids(X: np.ndarray, attrSet: list[int], clusters: np.ndarray):
     '''
@@ -227,54 +214,34 @@ def generateCentroids(X: np.ndarray, attrSet: list[int], clusters: np.ndarray):
     return centroids
 
 
-def calDisSampleToCentroid(X: np.ndarray, attrSet: list[int], centroids: np.ndarray):
-    '''
-    :param X: 原始数据集的条件属性部分
-    :param attrSet: 参与计算的属性集合
-    :param centroids: 上一次的各个簇的质心的情况
-    :return: 数据集在属性集上各个样本到质心的距离 之后用于选择一个最小的质心重新及逆行分配
-    '''
-    m = len(X)
-    n = len(centroids)
-    disSampleToCentroid = np.zeros((m, n))
-
-    partX = X[:, attrSet]
-    for i in range(m):
-        for j in range(n):
-            disSampleToCentroid[i][j] = np.sum(np.square(partX[i, :] - centroids[j]))
-    return disSampleToCentroid
-
-def disBetweenTwoCentroids(centroids1, centroids2) -> float:
-    '''
-    :param centroids1: 前一种聚类结果各个簇的簇心
-    :param centroids2: 后一种聚类结果各个簇的簇心
-    :return:
-    '''
-    # print(centroids1)
-    # print(centroids2)
-    diff = np.array(centroids1) - np.array(centroids2)
-    # print(diff)
-    diffVal = sum([sum(np.square(e)) for e in diff])
-    return diffVal
 
 def KmeansChangeByAttrSet(X: np.ndarray, Y: np.ndarray, oldclusters: list[np.ndarray], attrSet: list[int],
                         maxIterator: int = 20, diffValue=0.2):
     centroids = generateCentroids(X, attrSet, oldclusters)
-    specialModel = KMeans(n_clusters=len(centroids), init=centroids)  # 'init': 'k-means++',默认为k-means++
+    specialModel = KMeans(n_clusters=len(centroids), init=centroids, max_iter=20)  # 'init': 'k-means++',默认为k-means++
     clusRes = specialModel.fit(X[:,attrSet])
     newClusters, newClusterSampleNums = getClustersAndSampleNums(clusRes.labels_, len(centroids))
     return newClusters, newClusterSampleNums
 
-def getCurClusterResult(X: np.ndarray, y: np.ndarray, attrSet: list[int], preMultiClusterStrucArr: list[np.ndarray]):
+def getCurClusterResult(X: np.ndarray, y: np.ndarray, attrSet: list[int], preMultiClusterStrucArr: list[np.ndarray], attr:int):
+    '''
+    :param X:
+    :param y:
+    :param attrSet: 变更之后的属性集合 需要在之前多个粒度下的聚类结构的基础上 在该属性集上进行调整
+    :param preMultiClusterStrucArr: 之前的粒结构
+    :return:
+    '''
     curMultiClusterStrucArr = []
     curMultiClusterSampleNumArr = []
 
-    for clusterStru in preMultiClusterStrucArr:
+    for clusterStru in preMultiClusterStrucArr: # 单一聚类结构
         newClusters, newClusterSampleNums = KmeansChangeByAttrSet(X, y, clusterStru, attrSet)
         curMultiClusterStrucArr.append(newClusters.copy())
         curMultiClusterSampleNumArr.append(newClusterSampleNums.copy())
 
-    return curMultiClusterStrucArr, curMultiClusterSampleNumArr
+    curMultiClusterStrucScore = getmultiClusterStrucScore(curMultiClusterStrucArr, y)
+
+    return curMultiClusterStrucArr, curMultiClusterSampleNumArr, curMultiClusterStrucScore, attr
 # endregion
 
 def generateInitMultiCluster(X:np.ndarray, Y:np.ndarray, attrNum:int, clusterNums:list[int], granuleSampleNumThresholds:list[int]):
@@ -283,10 +250,16 @@ def generateInitMultiCluster(X:np.ndarray, Y:np.ndarray, attrNum:int, clusterNum
     initMultiClusterStrucArr = None
     initMultiClusterSampleNumArr = None
 
+    thread_pool = ThreadPoolExecutor(max_workers=10)  # 初始化线程池
+    thread_mission_list = []  # 用来记录线程的任务对象
     for i in range(attrNum):
-        tmpMultiClusterStrucArr, tmpMultiClusterSampleNumArr = getMultiGranleClusterByKeamns(X, Y, [i], clusterNums,
-                                                                                            granuleSampleNumThresholds)
-        tmpMultiClusterStrucScore = getmultiClusterStrucScore(tmpMultiClusterStrucArr, Y)
+        run_thread = thread_pool.submit(getMultiGranleClusterByKeamns, X, Y, [i], clusterNums,
+                                        granuleSampleNumThresholds)  # 多个参数像这样直接传递即可
+        thread_mission_list.append(run_thread)
+
+    for mission in as_completed(thread_mission_list):  # 这里会等待线程执行完毕，先完成的会先显示出来
+        tmpMultiClusterStrucArr, tmpMultiClusterSampleNumArr, tmpMultiClusterStrucScore = mission.result()
+        # print(len(tmpMultiClusterSampleNumArr))
         if tmpMultiClusterStrucScore > maxMultiClusterStrucScore:
             maxMultiClusterStrucScore = tmpMultiClusterStrucScore
             selectedAttr = i
@@ -300,48 +273,54 @@ def forwardAttrRedByMultiGranleKMeans(X: np.ndarray, Y: np.ndarray):
     sampleNum, attrNum = X.shape
     clusterNums, granuleSampleNumThresholds = getGranules(sampleNum)  # 生成多个粒度用于后序生成多个粒度下的聚类结果 [45, 23, 14, 11, 9] [4, 8, 13, 17, 22]
 
+    # 对单一属性进行多粒度聚类 得到一个聚类结构最好的属性
     selectedAttr, maxMultiClusterStrucScore, initMultiClusterStrucArr, initMultiClusterSampleNumArr = generateInitMultiCluster(X, Y, attrNum, clusterNums, granuleSampleNumThresholds)
-
-    # centroids = generateCentroids(X, [selectedAttr, 1], initMultiClusterStrucArr[0])
-    # specialModel = KMeans(n_clusters=len(centroids), init=centroids)  # 'init': 'k-means++',默认为k-means++
-    # clusRes = specialModel.fit(X[:,[selectedAttr, 1]])
-    # print(clusRes.labels_)
-    # exit()
 
     A = set([selectedAttr])
     AT = set(range(attrNum))
-    preMultiClusterStrucArr = initMultiClusterStrucArr
+    preMultiClusterStrucArr = initMultiClusterStrucArr # 保留上一次的多粒度聚类结构
     preScore = maxMultiClusterStrucScore
+    # print(preScore)
 
     while True:
         curScore = -100
         selectedAttr = 0
         curMultiClusterStrucArr = None
         curMultiClusterSampleNumArr = None
-        for a in AT - A:  #
-            # print(A | set([a]))
-            tmpMultiClusterStrucArr, tmpMultiClusterSampleNumArr = getCurClusterResult(X, Y, list(A | set([a])),
-                                                                                    preMultiClusterStrucArr)
-            tmpScore = getmultiClusterStrucScore(tmpMultiClusterStrucArr, Y)
 
-            if tmpScore > curScore:
-                curScore = tmpScore
+        thread_pool = ThreadPoolExecutor(max_workers=10)  # 初始化线程池
+        thread_mission_list = []  # 用来记录线程的任务对象
+
+
+        for a in AT - A:
+            run_thread = thread_pool.submit(getCurClusterResult, X, Y, list(A | set([a])), preMultiClusterStrucArr, a)  # 多个参数像这样直接传递即可
+            thread_mission_list.append(run_thread)
+
+        for mission in as_completed(thread_mission_list):  # 这里会等待线程执行完毕，先完成的会先显示出来
+            tmpMultiClusterStrucArr, tmpMultiClusterSampleNumArr, tmpMultiClusterStrucScore, a = mission.result()
+            # print(tmpMultiClusterSampleNumArr)
+            # score = getmultiClusterStrucScore(tmpMultiClusterStrucArr, Y)
+
+            if tmpMultiClusterStrucScore > curScore:
+                curScore = tmpMultiClusterStrucScore
                 selectedAttr = a
                 curMultiClusterStrucArr = tmpMultiClusterStrucArr
                 curMultiClusterSampleNumArr = tmpMultiClusterSampleNumArr
-        if curScore < preScore:
+
+        if curScore <= preScore:
             break
+
         preScore = curScore
         preMultiClusterStrucArr = curMultiClusterStrucArr
         preMultiClusterSampleNumArr = curMultiClusterSampleNumArr
         A = A | set([selectedAttr])
-
     return A
 
 
 if __name__ == "__main__":
-    dataSet = ["iris", "wine", "Glass", "plrx", "wdbc"]
-    path = '../DataSet_TEST/{}.csv'.format("iris")
+    dataSet = ["iris", "wine", "Glass", "plrx", "wdbc", "seeds", "BreastTissue"]
+    # path = '../DataSet_TEST/{}.csv'.format("Sonar") # 只选出一个属性 所以这里需要改造
+    path = '../DataSet_TEST/{}.csv'.format("Ionosphere")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-2]

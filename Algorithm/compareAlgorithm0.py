@@ -1,5 +1,5 @@
 import math
-
+import time
 import numpy as np
 from scipy.spatial.distance import squareform, pdist
 from sklearn.preprocessing import MinMaxScaler
@@ -65,6 +65,8 @@ def getPos(decisionClasses: dict, neighbors: dict) -> list:
     return posBD
 
 def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=0.2, stopCondition:str="PRE"):
+    start_time = time.time()  # 程序开始时间
+
     # 从数据集中获取相关信息
     sampleNum, attrNum = X.shape
     decClasses = generateDecisionClasses(Y)
@@ -136,7 +138,11 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
                 break
             A = nextA
 
-    return A
+    end_time = time.time()  # 程序结束时间
+    run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
+    # print(run_time_sec)
+
+    return A, preScore/sampleNum if stopCondition=="PRE" else curScore/sampleNum, run_time_sec
 
 
 if __name__ == "__main__":
@@ -155,5 +161,5 @@ if __name__ == "__main__":
         Y[Y==uniqueVal[i]] = i+1
     Y = Y.astype(int)
 
-    red = reductionUseNeighborhoodRoughSet(X, Y, 0.1, "PRE")
+    red = reductionUseNeighborhoodRoughSet(X, Y, 0.1, "FULL")
     print(red)

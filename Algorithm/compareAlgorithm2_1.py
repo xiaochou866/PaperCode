@@ -7,7 +7,7 @@ from itertools import combinations  # 生成一个范围内的所有属性的两
 from sklearn import preprocessing
 from util.ReductUtil import *  # 求取属性约简常用的一些函数
 
-# 文献: Feature Selection Based on Neighborhood Discrimination Index
+# 文献: Feature Selection Based on Neighborhood Discrimination Index (disSimilarity)
 
 def getTwoAttrKnowledgeDistance(sampleNum: int, neighborRelation1: list[np.ndarray],
                                 neighborRelation2: list[np.ndarray]) -> float:

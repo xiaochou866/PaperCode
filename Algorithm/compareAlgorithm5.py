@@ -134,7 +134,7 @@ def reductionUseRandomSampling(X:np.ndarray, Y:np.ndarray, radius:float=0.1, sto
     A = set()
     compareScore = 0
     for i in range(foldNum): # 不断将划分的各个部分加入到要考虑的论域中
-        print(compareScore)
+        # print(compareScore)
         # print("本次循环的属性集合为{}".format(A))
         sampleIndexs = np.append(sampleIndexs, testIndexArr[i]).astype(int)
         # print(sampleIndexs)
@@ -156,13 +156,12 @@ def reductionUseRandomSampling(X:np.ndarray, Y:np.ndarray, radius:float=0.1, sto
 
 if __name__ == "__main__":
     # print("你好世界")
-    path = '../DataSet_TEST/{}.csv'.format("wdbc")
+    path = '../DataSet_TEST/{}.csv'.format("BreastTissue")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-1]
     X = MinMaxScaler().fit_transform(X)  # 归一化取值均归为0-1之间
     Y = data[:, -1]
-    # print(Y==0.0)
 
     # 对Y进行处理
     uniqueVal = np.unique(Y)
@@ -170,7 +169,7 @@ if __name__ == "__main__":
         Y[Y==uniqueVal[i]] = i+1
     Y = Y.astype(int)
 
-    red = reductionUseRandomSampling(X, Y, 0.1, "PRE")
+    red = reductionUseRandomSampling(X, Y, 0.02, "PRE")
     print(red)
 
 
