@@ -2,7 +2,7 @@
 
 
 import math
-
+import time
 import numpy as np
 from scipy.spatial.distance import squareform, pdist
 from sklearn.model_selection import KFold
@@ -132,6 +132,8 @@ def reductionUseRandomSampling(X:np.ndarray, Y:np.ndarray, radius:float=0.1, sto
     testIndexArr = generateFoldXindex(sampelNum, foldNum)
     sampleIndexs = np.array([])
     A = set()
+
+    start_time = time.time()  # 程序开始时间
     compareScore = 0
     for i in range(foldNum): # 不断将划分的各个部分加入到要考虑的论域中
         # print(compareScore)
@@ -148,11 +150,14 @@ def reductionUseRandomSampling(X:np.ndarray, Y:np.ndarray, radius:float=0.1, sto
             tmpScore = len(getPos(decClasses, neighbors))
             if tmpScore >= compareScore:
                 nextA = nextA - set([a])
+                compareScore = tmpScore
                 break  # 每次只删除一个属性
         if len(A) == 1 or nextA == A:
             break
         A = nextA
-    return A
+    end_time = time.time()  # 程序结束时间
+    run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
+    return A, compareScore/sampelNum, run_time_sec
 
 if __name__ == "__main__":
     # print("你好世界")

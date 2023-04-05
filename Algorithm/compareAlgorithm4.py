@@ -1,5 +1,6 @@
 import math
 
+import time
 import numpy as np
 from scipy.spatial.distance import squareform, pdist
 from sklearn.preprocessing import MinMaxScaler
@@ -120,6 +121,8 @@ def reductionUseVariableRadiusNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray,
     AT = set(range(attrNum))
     preScore = -100
 
+    start_time = time.time()  # 程序开始时间
+
     while True:
         curScore = -100
         selectedAttr = 0
@@ -137,13 +140,15 @@ def reductionUseVariableRadiusNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray,
             break
         preScore = curScore
         A = A | set([selectedAttr])
+    end_time = time.time()  # 程序结束时间
+    run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
 
-    return A
+    return A, preScore/sampleNum, run_time_sec
 
 
 if __name__ == "__main__":
     # print("你好世界")
-    path = '../DataSet_TEST/{}.csv'.format("accent")
+    path = '../DataSet_TEST/{}.csv'.format("wine")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-1]
@@ -152,10 +157,10 @@ if __name__ == "__main__":
     # print(Y==0.0)
 
     # 对Y进行处理
-    uniqueVal = np.unique(Y)
-    for i in range(len(uniqueVal)-1, -1, -1):
-        Y[Y==uniqueVal[i]] = i+1
-    Y = Y.astype(int)
+    # uniqueVal = np.unique(Y)
+    # for i in range(len(uniqueVal)-1, -1, -1):
+    #     Y[Y==uniqueVal[i]] = i+1
+    # Y = Y.astype(int)
 
     red = reductionUseVariableRadiusNeighborhoodRoughSet(X, Y, 0.2)
     print(red)

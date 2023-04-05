@@ -5,6 +5,8 @@ import numpy as np
 from scipy.spatial.distance import squareform, pdist
 from itertools import combinations  # 生成一个范围内的所有属性的两两组合用于生成相似度矩阵
 from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler
+
 from util.ReductUtil import *  # 求取属性约简常用的一些函数
 
 # 文献: Feature Selection Based on Neighborhood Discrimination Index (disSimilarity)
@@ -92,9 +94,9 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
 
         # region 本轮约简开始
         start_time = time.time()  # 程序开始时间
-        print("###############################################################################################"
-                "\n开始本轮约简 算法2.1 参数为 数据集:{} 邻域半径:{} 指标:{} 中止条件:{}\n".format(dataName, radius, index,
-                                                                                            stopCondition))
+        # print("###############################################################################################"
+        #         "\n开始本轮约简 算法2.1 参数为 数据集:{} 邻域半径:{} 指标:{} 中止条件:{}\n".format(dataName, radius, index,
+        #                                                                                     stopCondition))
 
         AT = set(range(conditionAttrNum))  # 全体属性集合
         A = set()  # 用于记录最终结果
@@ -102,7 +104,7 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
         disSimilarityMatrix = generateDisSimilarityMatrix(X, radius)  # 生成不相似度矩阵
 
         cycleNum = 1
-        print("运行情况:")
+        # print("运行情况:")
         # endregion
 
         preScore = -1000 if scoreTrend == "UP" else 1000
@@ -110,7 +112,7 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
             # region 运行时间超过一定的界限 自动结束函数运行 进行下一次属性约简
             middle_time = time.time()
             run_time_long = (middle_time - start_time) / 60
-            print("本轮属性约简选择属性轮数:{} 已运行时间:{}分钟".format(cycleNum, run_time_long))
+            # print("本轮属性约简选择属性轮数:{} 已运行时间:{}分钟".format(cycleNum, run_time_long))
             cycleNum += 1
             if run_time_long > 120:
                 print("本轮属性约简超过2小时 退出本次函数调用")
@@ -150,12 +152,12 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
         end_time = time.time()  # 程序结束时间
         run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
 
-        print("\n运行结果:")
-        print("本轮约简需要的时间为:{}秒, {}分钟".format(run_time_sec, run_time_sec / 60))
-        print("最终选出的属性约简为:{}".format(A))
-        print("最终选出的属性集在该指标下的得分为:{}".format(preScore))
+        # print("\n运行结果:")
+        # print("本轮约简需要的时间为:{}秒, {}分钟".format(run_time_sec, run_time_sec / 60))
+        # print("最终选出的属性约简为:{}".format(A))
+        # print("最终选出的属性集在该指标下的得分为:{}".format(preScore))
 
-        return A, preScore, run_time_sec
+        # return A, preScore, run_time_sec
 
     # 第二种暂停约束
     elif stopCondition == "FULL":
@@ -169,9 +171,9 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
 
             # region 本轮约简开始
             start_time = time.time()  # 程序开始时间
-            print("###############################################################################################"
-                    "\n开始本轮约简 算法2.1 参数为 数据集:{} 邻域半径:{} 指标:{} 中止条件:{}\n".format(path, radius, index,
-                                                                                                stopCondition))
+            # print("###############################################################################################"
+            #         "\n开始本轮约简 算法2.1 参数为 数据集:{} 邻域半径:{} 指标:{} 中止条件:{}\n".format(path, radius, index,
+            #                                                                                     stopCondition))
             # endregion
 
             AT = set(range(conditionAttrNum))  # 全体属性集合
@@ -181,7 +183,7 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
 
             # region 运行循环开始
             cycleNum = 1
-            print("运行情况:")
+            # print("运行情况:")
             # endregion
             fullAttrSetScore = evaluteAttrSetScoreIntegration(decClasses, radius, X, Y, None, index, ND)
             while True:
@@ -229,12 +231,12 @@ def reductionUseDisSimilarity(dataName: str, radius: float, index: str, stopCond
         end_time = time.time()  # 程序结束时间
         run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
 
-        print("\n运行结果:")
-        print("本轮约简需要的时间为:{}秒, {}分钟".format(run_time_sec, run_time_sec / 60))
-        print("最终选出的属性约简为:{}".format(A))
-        print("最终选出的属性集在该指标下的得分为:{}".format(curScore))
-        return A, curScore, run_time_sec
-
+        # print("\n运行结果:")
+        # print("本轮约简需要的时间为:{}秒, {}分钟".format(run_time_sec, run_time_sec / 60))
+        # print("最终选出的属性约简为:{}".format(A))
+        # print("最终选出的属性集在该指标下的得分为:{}".format(curScore))
+        # return A, curScore, run_time_sec
+    return A, preScore if stopCondition=="PRE" else curScore, run_time_sec
 
 
 
@@ -248,4 +250,15 @@ if __name__ == "__main__":
     #     for index in ["POS", "CE", "NDI", "NDER"]:
     #         for stopCondition in ["PRE", "FULL"]:
     #             reductionUseDisSimilarity(dataPath, radiusArr, index, stopCondition)
-    print("你好世界")
+    # print("你好世界")
+
+    path = '../DataSet_TEST/{}.csv'.format("wine")
+    data = np.loadtxt(path, delimiter=",", skiprows=1)
+    sampelNum, attrNum = data.shape
+
+    X = data[:, :-1]
+    X = MinMaxScaler().fit_transform(X)  # 归一化取值均归为0-1之间
+    Y = data[:, -1]
+
+    res = reductionUseDisSimilarity("wine", 0.2, "POS", "PRE", X, Y)
+    print(res) # 返回结果顺序 约简 得分 时间

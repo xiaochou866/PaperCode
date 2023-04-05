@@ -39,19 +39,27 @@ if __name__ == "__main__":
 
     # 设置将要进行实验的所有数据集
     # dataNames = ['fertility_Diagnosis', 'BreastTissue', 'Iris']  # 预先测试的三个小数据集
-    # dataNames = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx', 'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
-    #     'PimaIndiansDiabetes', 'Ionosphere', 'movement', 'vote', 'musk', 'wdbc', 'diamonds_filter', 'australian',
-    #     'BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
+    dataNames = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx', 'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
+        'PimaIndiansDiabetes', 'Ionosphere', 'movement', 'vote', 'musk', 'wdbc', 'diamonds_filter', 'australian',
+        'BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
     # 运行到BreastCancer了 继续遇到数据集有缺失报错 修正数据集继续进行实验
-    dataNames = ['BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
+    # dataNames = ['BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
 
 
     # 设置将要进行实验的所有算法
     # algorithms = []
-    algorithmName = "NeighborhoodRoughSet"
+    # algorithmName = "NeighborhoodRoughSet" # 对应算法0
+    # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
+    # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
+    # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
+    # algorithmName = "WeightedAttributeReduction" # 对应算法3
+    algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
+    # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
+
 
     # 优先级 算法>数据集>半径
-    storeDirPath = os.path.join(os.path.abspath("../Res"), "exp1", "compareAlgorithms", "compareAlgorithm0")
+    storeDirPath = os.path.join(os.path.abspath("../Res"), "exp1", "compareAlgorithms", "compareAlgorithm4")
+
     # 检查特定的文件是否存在 如果不存在则创建文件 如果存在则往文件中追加写结果
     if not os.path.exists(storeDirPath):  # os模块判断并创建
         os.makedirs(storeDirPath)
@@ -72,7 +80,16 @@ if __name__ == "__main__":
             # 结果生成时间, 算法名称, 数据集名称, 约简结果, 依赖度, 约简时间
             # nowTime, algorithmName, dataName, red, score, runTime
             nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            red, score, runTime = reductionUseNeighborhoodRoughSet(X, Y, radius, "PRE")
+
+            # 指定属性约简的算法
+            # red, score, runTime = reductionUseNeighborhoodRoughSet(X, Y, radius, "PRE") # 对应算法0 基于邻域粗糙集的属性约简
+            # red, score, runTime = reductionUseAttributeGroup(dataName, radius, "POS", "PRE", X, Y) # 对应算法1 基于属性分组的属性约简
+            # red, score, runTime = reductionUseDisSimilarity(dataName, radius, "POS", "PRE", X, Y) # 对应算法2-1 基于差异度的属性约简
+            # red, score, runTime = reductionUseSimilarity(dataName, radius, "POS", "PRE", X, Y) # 对应算法2-2 基于相似度的属性约简
+            # red, score, runTime = reductionUseWeightedNeighborhood(dataName, radius, "POS", "PRE", X, Y) # 对应算法3 基于属性权重的的属性约简
+            red, score, runTime = reductionUseVariableRadiusNeighborhoodRoughSet(X, Y, radius) # 对应算法4 基于变邻域半径的属性约简
+            # red, score, runTime = reductionUseRandomSampling(X, Y, radius, "PRE") # 对应算法5 基于随机样本分组的属性约简
+
             resList = [nowTime, algorithmName, dataName, radius, red, score, runTime]
             resList = [str(e) for e in resList]
             print(resList)

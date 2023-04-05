@@ -92,6 +92,7 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
                 break
             preScore = curScore
             A = A | set([selectedAttr])
+
         # 删除属性的过程 如果从选出的属性集A中去除属性之后仍然满足约束就可以将一个属性从A中删除
         while True:
             nextA = A
@@ -160,6 +161,8 @@ if __name__ == "__main__":
     for i in range(len(uniqueVal)-1, -1, -1):
         Y[Y==uniqueVal[i]] = i+1
     Y = Y.astype(int)
+    # print(type(X))
+    # exit()
 
     red = reductionUseNeighborhoodRoughSet(X, Y, 0.1, "FULL")
     print(red)
