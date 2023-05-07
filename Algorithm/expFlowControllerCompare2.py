@@ -56,7 +56,7 @@ def generateRadiusArr(startRadius:float, endRadius:float, interval:float):
 
 if __name__ == "__main__":
     # 展示将要进行实验的所有数据集
-    dir = "..\DataSet_TEST"
+    dir = "../DataSet_TEST"
     dataCategory = ["ori", "1fold", "2fold", "3fold", "4fold", "5fold", "10noise", "20noise", "30noise"]
     dataSet = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx',
                 'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     expRadius = generateRadiusArr(0.02, 0.42, 0.02) # 设置实验半径为 0.02, 0.04, ... ,0.4 这20个半径
 
     # 设置将要进行实验的算法
-    # algorithmName = "NeighborhoodRoughSet" # 对应算法0
+    algorithmName = "NeighborhoodRoughSet" # 对应算法0
     # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
     # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     # algorithmName = "algorithm5" # 对应算法5
 
     # 设置将要进行实验的数据种类
-    category = dataCategory[1]  # 指定数据的类别 每次专注于一种类别的数据集
+    category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
 
 
     # # 优先级 算法>数据集>半径
@@ -143,7 +143,7 @@ if __name__ == "__main__":
 
             print(resList)  # 展示运行进度
 
-            resStorePath = os.path.join("..\Res", "compareAlgorithms", algorithmName, category)
+            resStorePath = os.path.join("../Res", "compareAlgorithms", algorithmName, category)
             if not os.path.exists(resStorePath):  # 检查目录是否存在如果不存在则创建目录
                 os.makedirs(resStorePath)
 
@@ -152,6 +152,7 @@ if __name__ == "__main__":
                 with open(fileName, "w", encoding="utf-8") as f:
                     f.write("结果生成时间|算法名称|数据集种类|数据集名称|半径|约简结果|原始数据属性长度|约简之后属性长度|属性集得分|运行时间|5折KNN准确率|5折SVM准确率|5折CART准确率|KNN平均准确率|SVM平均准确率|CART平均准确率\n")
                     f.write("|".join(resList) + "\n")
+                    print("写入成功")
             else:
                 with open(fileName, "a", encoding="utf-8") as f:  # 默认会进行追加
                     f.write("|".join(resList) + "\n")
