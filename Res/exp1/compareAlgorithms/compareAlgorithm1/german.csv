@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:41:37|AttributeGroupAttributeReduction|german|0.02|{0, 11, 12, 6}|0.559|3.2263693809509277
+2023-03-05 15:41:40|AttributeGroupAttributeReduction|german|0.04|{0, 3, 6, 10, 18}|0.544|3.0789623260498047
+2023-03-05 15:41:43|AttributeGroupAttributeReduction|german|0.06|{0, 3, 6, 10, 18}|0.544|3.0564706325531006
+2023-03-05 15:41:47|AttributeGroupAttributeReduction|german|0.08|{0, 3, 6, 10, 18}|0.544|3.0156047344207764
+2023-03-05 15:41:50|AttributeGroupAttributeReduction|german|0.1|{0, 3, 6, 10, 18}|0.544|3.0914270877838135
+2023-03-05 15:41:53|AttributeGroupAttributeReduction|german|0.12000000000000001|{0, 6, 10, 11, 12}|0.544|4.769670724868774
+2023-03-05 15:41:58|AttributeGroupAttributeReduction|german|0.14|{0, 4, 6, 7, 11, 18}|0.529|4.8935301303863525
+2023-03-05 15:42:03|AttributeGroupAttributeReduction|german|0.16|{0, 6, 7, 11, 12, 18}|0.534|6.189363718032837
+2023-03-05 15:42:10|AttributeGroupAttributeReduction|german|0.18|{0, 6, 7, 11, 12, 18}|0.565|6.965510845184326
+2023-03-05 15:42:17|AttributeGroupAttributeReduction|german|0.19999999999999998|{0, 6, 10, 11, 12, 18}|0.541|5.682100296020508
+2023-03-05 15:42:23|AttributeGroupAttributeReduction|german|0.21999999999999997|{0, 6, 7, 11, 12, 18}|0.568|5.9429192543029785
+2023-03-05 15:42:29|AttributeGroupAttributeReduction|german|0.23999999999999996|{0, 6, 7, 11, 15}|0.561|4.63149881362915
+2023-03-05 15:42:34|AttributeGroupAttributeReduction|german|0.25999999999999995|{0, 6, 7, 8, 11, 15, 18}|0.527|5.917419672012329
+2023-03-05 15:42:40|AttributeGroupAttributeReduction|german|0.27999999999999997|{0, 4, 6, 7, 11, 15, 18}|0.532|6.043358325958252
+2023-03-05 15:42:46|AttributeGroupAttributeReduction|german|0.3|{0, 6, 7, 8, 11, 15, 18}|0.527|5.922298431396484
+2023-03-05 15:42:52|AttributeGroupAttributeReduction|german|0.32|{0, 6, 7, 11, 12, 15, 18}|0.533|5.890752077102661
+2023-03-05 15:42:58|AttributeGroupAttributeReduction|german|0.34|{0, 6, 7, 10, 11, 12, 18, 19}|0.553|8.053240299224854
+2023-03-05 15:43:07|AttributeGroupAttributeReduction|german|0.36000000000000004|{0, 1, 6, 7, 10, 11, 18, 19}|0.559|9.268702030181885
+2023-03-05 15:43:16|AttributeGroupAttributeReduction|german|0.38000000000000006|{0, 1, 6, 7, 10, 11, 12, 18, 19}|0.563|9.110980987548828
+2023-03-05 15:43:25|AttributeGroupAttributeReduction|german|0.4000000000000001|{0, 1, 6, 7, 10, 11, 12, 18, 19}|0.554|9.11831021308899

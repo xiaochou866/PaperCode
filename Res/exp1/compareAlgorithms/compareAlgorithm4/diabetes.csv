@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 19:02:51|VariableRadiusNeighborhoodRoughSet|diabetes|0.02|{0, 1, 5, 7}|1.0|0.9641242027282715
+2023-03-05 19:02:52|VariableRadiusNeighborhoodRoughSet|diabetes|0.04|{1, 2, 5, 6, 7}|1.0|1.1957194805145264
+2023-03-05 19:02:53|VariableRadiusNeighborhoodRoughSet|diabetes|0.06|{0, 1, 2, 3, 5, 6}|1.0|1.486637830734253
+2023-03-05 19:02:54|VariableRadiusNeighborhoodRoughSet|diabetes|0.08|{0, 1, 2, 3, 4, 5, 6, 7}|0.9986979166666666|1.7219724655151367
+2023-03-05 19:02:56|VariableRadiusNeighborhoodRoughSet|diabetes|0.1|{0, 1, 2, 3, 4, 5, 6, 7}|0.9973958333333334|1.86216139793396
+2023-03-05 19:02:58|VariableRadiusNeighborhoodRoughSet|diabetes|0.12000000000000001|{0, 1, 2, 3, 4, 5, 6, 7}|0.9869791666666666|2.163902997970581
+2023-03-05 19:03:00|VariableRadiusNeighborhoodRoughSet|diabetes|0.14|{0, 1, 2, 3, 4, 5, 6, 7}|0.96875|2.341749906539917
+2023-03-05 19:03:02|VariableRadiusNeighborhoodRoughSet|diabetes|0.16|{0, 1, 2, 3, 4, 5, 6, 7}|0.9375|2.6699116230010986
+2023-03-05 19:03:05|VariableRadiusNeighborhoodRoughSet|diabetes|0.18|{0, 1, 2, 3, 4, 5, 6, 7}|0.90234375|2.818647861480713
+2023-03-05 19:03:08|VariableRadiusNeighborhoodRoughSet|diabetes|0.19999999999999998|{0, 1, 2, 3, 4, 5, 6, 7}|0.83984375|2.9482603073120117
+2023-03-05 19:03:11|VariableRadiusNeighborhoodRoughSet|diabetes|0.21999999999999997|{0, 1, 2, 3, 4, 5, 6, 7}|0.765625|3.2224950790405273
+2023-03-05 19:03:14|VariableRadiusNeighborhoodRoughSet|diabetes|0.23999999999999996|{0, 1, 2, 3, 4, 5, 6, 7}|0.6640625|3.5224523544311523
+2023-03-05 19:03:18|VariableRadiusNeighborhoodRoughSet|diabetes|0.25999999999999995|{0, 1, 2, 3, 4, 5, 6, 7}|0.578125|3.7034308910369873
+2023-03-05 19:03:21|VariableRadiusNeighborhoodRoughSet|diabetes|0.27999999999999997|{0, 1, 2, 3, 4, 5, 6, 7}|0.4583333333333333|3.82344126701355
+2023-03-05 19:03:25|VariableRadiusNeighborhoodRoughSet|diabetes|0.3|{0, 1, 2, 3, 4, 5, 6, 7}|0.3658854166666667|4.259816884994507
+2023-03-05 19:03:29|VariableRadiusNeighborhoodRoughSet|diabetes|0.32|{0, 1, 2, 3, 4, 5, 6, 7}|0.28515625|4.490560054779053
+2023-03-05 19:03:34|VariableRadiusNeighborhoodRoughSet|diabetes|0.34|{0, 1, 2, 3, 4, 5, 6, 7}|0.23046875|4.69954514503479
+2023-03-05 19:03:38|VariableRadiusNeighborhoodRoughSet|diabetes|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7}|0.17578125|4.667022943496704
+2023-03-05 19:03:43|VariableRadiusNeighborhoodRoughSet|diabetes|0.38000000000000006|{3}|0.0013020833333333333|2.529747724533081
+2023-03-05 19:03:46|VariableRadiusNeighborhoodRoughSet|diabetes|0.4000000000000001|{0, 1, 2, 3, 4, 5, 6, 7}|0.09505208333333333|5.1145265102386475

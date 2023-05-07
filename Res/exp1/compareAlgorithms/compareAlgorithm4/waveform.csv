@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 19:13:50|VariableRadiusNeighborhoodRoughSet|waveform|0.02|{0, 9, 4, 15}|1.0|54.114389419555664
+2023-03-05 19:14:44|VariableRadiusNeighborhoodRoughSet|waveform|0.04|{0, 4, 5, 9, 10}|1.0|79.4236192703247
+2023-03-05 19:16:03|VariableRadiusNeighborhoodRoughSet|waveform|0.06|{4, 9, 11, 12, 14}|1.0|121.85973858833313
+2023-03-05 19:18:05|VariableRadiusNeighborhoodRoughSet|waveform|0.08|{4, 5, 9, 10, 11, 14}|1.0|175.04003429412842
+2023-03-05 19:21:00|VariableRadiusNeighborhoodRoughSet|waveform|0.1|{1, 4, 8, 9, 10, 11, 14}|1.0|225.3958704471588
+2023-03-05 19:24:46|VariableRadiusNeighborhoodRoughSet|waveform|0.12000000000000001|{16, 0, 3, 4, 5, 8, 9, 11}|1.0|280.7170069217682
+2023-03-05 19:29:26|VariableRadiusNeighborhoodRoughSet|waveform|0.14|{0, 1, 6, 7, 9, 10, 11, 12}|1.0|314.01657485961914
+2023-03-05 19:34:40|VariableRadiusNeighborhoodRoughSet|waveform|0.16|{16, 5, 6, 7, 9, 10, 11, 12}|1.0|419.55791330337524
+2023-03-05 19:41:40|VariableRadiusNeighborhoodRoughSet|waveform|0.18|{0, 1, 3, 7, 9, 10, 11, 12, 14}|1.0|515.6196489334106
+2023-03-05 19:50:16|VariableRadiusNeighborhoodRoughSet|waveform|0.19999999999999998|{0, 1, 3, 5, 7, 9, 10, 11, 12, 14}|1.0|544.7113683223724
+2023-03-05 19:59:20|VariableRadiusNeighborhoodRoughSet|waveform|0.21999999999999997|{1, 7, 8, 9, 10, 11, 12, 14, 17, 20}|1.0|606.4788703918457
+2023-03-05 20:09:27|VariableRadiusNeighborhoodRoughSet|waveform|0.23999999999999996|{0, 1, 2, 5, 7, 9, 10, 11, 12, 14, 16}|1.0|805.2168524265289
+2023-03-05 20:22:52|VariableRadiusNeighborhoodRoughSet|waveform|0.25999999999999995|{1, 2, 3, 4, 7, 9, 10, 11, 12, 14, 15, 16}|1.0|923.3523285388947
+2023-03-05 20:38:15|VariableRadiusNeighborhoodRoughSet|waveform|0.27999999999999997|{0, 1, 2, 3, 5, 6, 9, 10, 11, 13, 14, 16, 19}|1.0|657.8624415397644
+2023-03-05 20:49:13|VariableRadiusNeighborhoodRoughSet|waveform|0.3|{0}|0.0|453.9143145084381
+2023-03-05 20:56:48|VariableRadiusNeighborhoodRoughSet|waveform|0.32|{0}|0.0|509.6438846588135
+2023-03-05 21:05:18|VariableRadiusNeighborhoodRoughSet|waveform|0.34|{0}|0.0|570.0517613887787
+2023-03-05 21:14:50|VariableRadiusNeighborhoodRoughSet|waveform|0.36000000000000004|{0}|0.0|655.9645781517029
+2023-03-05 21:25:47|VariableRadiusNeighborhoodRoughSet|waveform|0.38000000000000006|{0}|0.0|741.7092700004578
+2023-03-05 21:38:10|VariableRadiusNeighborhoodRoughSet|waveform|0.4000000000000001|{0}|0.0|1481.6361360549927

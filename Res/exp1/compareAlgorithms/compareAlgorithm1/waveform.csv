@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:44:15|AttributeGroupAttributeReduction|waveform|0.02|{8, 9, 4}|0.4748|68.10912895202637
+2023-03-05 15:45:23|AttributeGroupAttributeReduction|waveform|0.04|{10, 4, 6, 15}|0.4576|103.86722445487976
+2023-03-05 15:47:07|AttributeGroupAttributeReduction|waveform|0.06|{10, 4, 13, 14}|0.5556|143.6873197555542
+2023-03-05 15:49:34|AttributeGroupAttributeReduction|waveform|0.08|{4, 6, 9, 11, 14}|0.56|82.60596895217896
+2023-03-05 15:51:00|AttributeGroupAttributeReduction|waveform|0.1|{4, 6, 10, 11, 15}|0.5736|80.25559902191162
+2023-03-05 15:52:21|AttributeGroupAttributeReduction|waveform|0.12000000000000001|{4, 6, 9, 11, 15, 19}|0.5624|97.90688467025757
+2023-03-05 15:53:59|AttributeGroupAttributeReduction|waveform|0.14|{3, 8, 10, 12, 14, 19}|0.5194|171.08612847328186
+2023-03-05 15:56:53|AttributeGroupAttributeReduction|waveform|0.16|{0, 4, 6, 10, 11, 16, 19}|0.549|219.19628286361694
+2023-03-05 16:00:36|AttributeGroupAttributeReduction|waveform|0.18|{0, 4, 6, 7, 10, 11, 15, 19}|0.5808|235.41516017913818
+2023-03-05 16:04:34|AttributeGroupAttributeReduction|waveform|0.19999999999999998|{0, 4, 6, 10, 11, 14, 16, 19}|0.5766|258.6910994052887
+2023-03-05 16:08:56|AttributeGroupAttributeReduction|waveform|0.21999999999999997|{0, 4, 8, 9, 10, 11, 13, 14, 19}|0.5964|301.96536135673523
+2023-03-05 16:14:01|AttributeGroupAttributeReduction|waveform|0.23999999999999996|{0}|0.0|128.330384016037
+2023-03-05 16:16:12|AttributeGroupAttributeReduction|waveform|0.25999999999999995|{0}|0.0|132.25485253334045
+2023-03-05 16:18:27|AttributeGroupAttributeReduction|waveform|0.27999999999999997|{0}|0.0|135.57512712478638
+2023-03-05 16:20:46|AttributeGroupAttributeReduction|waveform|0.3|{0}|0.0|138.69236302375793
+2023-03-05 16:23:08|AttributeGroupAttributeReduction|waveform|0.32|{0}|0.0|141.97846031188965
+2023-03-05 16:25:32|AttributeGroupAttributeReduction|waveform|0.34|{0}|0.0|145.17141795158386
+2023-03-05 16:28:01|AttributeGroupAttributeReduction|waveform|0.36000000000000004|{0}|0.0|147.43056535720825
+2023-03-05 16:30:31|AttributeGroupAttributeReduction|waveform|0.38000000000000006|{0}|0.0|150.89883255958557
+2023-03-05 16:33:05|AttributeGroupAttributeReduction|waveform|0.4000000000000001|{0}|0.0|151.64664340019226

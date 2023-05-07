@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:26:40|RandomSamplingAttribureReduction|BreastCancer|0.02|{0, 2, 3, 4}|1.0|0.5037112236022949
+2023-03-05 15:26:40|RandomSamplingAttribureReduction|BreastCancer|0.04|{0, 2, 3, 4}|1.0|0.501798152923584
+2023-03-05 15:26:41|RandomSamplingAttribureReduction|BreastCancer|0.06|{0, 2, 3, 4}|1.0|0.5200510025024414
+2023-03-05 15:26:41|RandomSamplingAttribureReduction|BreastCancer|0.08|{0, 2, 3, 4}|1.0|0.5039505958557129
+2023-03-05 15:26:42|RandomSamplingAttribureReduction|BreastCancer|0.1|{0, 2, 3, 4}|1.0|0.5019950866699219
+2023-03-05 15:26:42|RandomSamplingAttribureReduction|BreastCancer|0.12000000000000001|{0, 1, 2, 3, 5}|1.0|0.8155953884124756
+2023-03-05 15:26:43|RandomSamplingAttribureReduction|BreastCancer|0.14|{0, 1, 2, 3, 5}|1.0|0.831634521484375
+2023-03-05 15:26:44|RandomSamplingAttribureReduction|BreastCancer|0.16|{0, 1, 3, 5, 7}|1.0|0.8580641746520996
+2023-03-05 15:26:45|RandomSamplingAttribureReduction|BreastCancer|0.18|{0, 1, 3, 5, 7}|1.0|0.8610289096832275
+2023-03-05 15:26:46|RandomSamplingAttribureReduction|BreastCancer|0.19999999999999998|{0, 1, 3, 4, 5, 7}|1.0|0.9133634567260742
+2023-03-05 15:26:47|RandomSamplingAttribureReduction|BreastCancer|0.21999999999999997|{0, 1, 3, 4, 5, 7}|1.0|0.9127366542816162
+2023-03-05 15:26:47|RandomSamplingAttribureReduction|BreastCancer|0.23999999999999996|{0, 2, 3, 4, 5, 6, 7}|1.0|1.0526390075683594
+2023-03-05 15:26:48|RandomSamplingAttribureReduction|BreastCancer|0.25999999999999995|{0, 1, 3, 4, 5, 7, 8}|1.0|1.1847245693206787
+2023-03-05 15:26:50|RandomSamplingAttribureReduction|BreastCancer|0.27999999999999997|{0, 1, 2, 3, 4, 5, 6, 7, 8}|1.0|1.2006940841674805
+2023-03-05 15:26:51|RandomSamplingAttribureReduction|BreastCancer|0.3|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.9971387696709585|1.1749095916748047
+2023-03-05 15:26:52|RandomSamplingAttribureReduction|BreastCancer|0.32|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.994277539341917|1.2006077766418457
+2023-03-05 15:26:53|RandomSamplingAttribureReduction|BreastCancer|0.34|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.9899856938483548|1.3248229026794434
+2023-03-05 15:26:55|RandomSamplingAttribureReduction|BreastCancer|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.9785407725321889|1.30460524559021
+2023-03-05 15:26:56|RandomSamplingAttribureReduction|BreastCancer|0.38000000000000006|{1, 2, 3, 4, 5, 6, 7, 8}|0.932761087267525|1.321376085281372
+2023-03-05 15:26:57|RandomSamplingAttribureReduction|BreastCancer|0.4000000000000001|{1, 2, 3, 4, 5, 6, 7, 8}|0.9184549356223176|1.3228027820587158

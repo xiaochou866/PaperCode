@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:24:57|RandomSamplingAttribureReduction|vote|0.02|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24741721153259277
+2023-03-05 15:24:57|RandomSamplingAttribureReduction|vote|0.04|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24403762817382812
+2023-03-05 15:24:58|RandomSamplingAttribureReduction|vote|0.06|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24186420440673828
+2023-03-05 15:24:58|RandomSamplingAttribureReduction|vote|0.08|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.23786711692810059
+2023-03-05 15:24:58|RandomSamplingAttribureReduction|vote|0.1|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24141454696655273
+2023-03-05 15:24:58|RandomSamplingAttribureReduction|vote|0.12000000000000001|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.2416856288909912
+2023-03-05 15:24:59|RandomSamplingAttribureReduction|vote|0.14|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24306273460388184
+2023-03-05 15:24:59|RandomSamplingAttribureReduction|vote|0.16|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.2687039375305176
+2023-03-05 15:24:59|RandomSamplingAttribureReduction|vote|0.18|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.41136765480041504
+2023-03-05 15:24:59|RandomSamplingAttribureReduction|vote|0.19999999999999998|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.27832841873168945
+2023-03-05 15:25:00|RandomSamplingAttribureReduction|vote|0.21999999999999997|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24723076820373535
+2023-03-05 15:25:00|RandomSamplingAttribureReduction|vote|0.23999999999999996|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24051356315612793
+2023-03-05 15:25:00|RandomSamplingAttribureReduction|vote|0.25999999999999995|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24124479293823242
+2023-03-05 15:25:00|RandomSamplingAttribureReduction|vote|0.27999999999999997|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.2555053234100342
+2023-03-05 15:25:01|RandomSamplingAttribureReduction|vote|0.3|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.23515796661376953
+2023-03-05 15:25:01|RandomSamplingAttribureReduction|vote|0.32|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24128127098083496
+2023-03-05 15:25:01|RandomSamplingAttribureReduction|vote|0.34|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24257993698120117
+2023-03-05 15:25:01|RandomSamplingAttribureReduction|vote|0.36000000000000004|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.2405688762664795
+2023-03-05 15:25:02|RandomSamplingAttribureReduction|vote|0.38000000000000006|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24436330795288086
+2023-03-05 15:25:02|RandomSamplingAttribureReduction|vote|0.4000000000000001|{0, 1, 2, 3, 6, 9, 10, 11, 14}|1.0|0.24639320373535156

@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 19:03:51|VariableRadiusNeighborhoodRoughSet|pima|0.02|{0, 1, 5, 7}|1.0|0.939793586730957
+2023-03-05 19:03:52|VariableRadiusNeighborhoodRoughSet|pima|0.04|{1, 2, 5, 6, 7}|1.0|1.1875674724578857
+2023-03-05 19:03:53|VariableRadiusNeighborhoodRoughSet|pima|0.06|{0, 1, 2, 3, 5, 6}|1.0|1.501983642578125
+2023-03-05 19:03:54|VariableRadiusNeighborhoodRoughSet|pima|0.08|{0, 1, 2, 3, 4, 5, 6, 7}|0.9986979166666666|1.7346985340118408
+2023-03-05 19:03:56|VariableRadiusNeighborhoodRoughSet|pima|0.1|{0, 1, 2, 3, 4, 5, 6, 7}|0.9973958333333334|1.862123727798462
+2023-03-05 19:03:58|VariableRadiusNeighborhoodRoughSet|pima|0.12000000000000001|{0, 1, 2, 3, 4, 5, 6, 7}|0.9869791666666666|2.2171318531036377
+2023-03-05 19:04:00|VariableRadiusNeighborhoodRoughSet|pima|0.14|{0, 1, 2, 3, 4, 5, 6, 7}|0.96875|2.4593312740325928
+2023-03-05 19:04:03|VariableRadiusNeighborhoodRoughSet|pima|0.16|{0, 1, 2, 3, 4, 5, 6, 7}|0.9375|2.6538751125335693
+2023-03-05 19:04:05|VariableRadiusNeighborhoodRoughSet|pima|0.18|{0, 1, 2, 3, 4, 5, 6, 7}|0.90234375|2.665369987487793
+2023-03-05 19:04:08|VariableRadiusNeighborhoodRoughSet|pima|0.19999999999999998|{0, 1, 2, 3, 4, 5, 6, 7}|0.83984375|2.8968615531921387
+2023-03-05 19:04:11|VariableRadiusNeighborhoodRoughSet|pima|0.21999999999999997|{0, 1, 2, 3, 4, 5, 6, 7}|0.765625|3.4531753063201904
+2023-03-05 19:04:14|VariableRadiusNeighborhoodRoughSet|pima|0.23999999999999996|{0, 1, 2, 3, 4, 5, 6, 7}|0.6640625|3.698279857635498
+2023-03-05 19:04:18|VariableRadiusNeighborhoodRoughSet|pima|0.25999999999999995|{0, 1, 2, 3, 4, 5, 6, 7}|0.578125|3.9576590061187744
+2023-03-05 19:04:22|VariableRadiusNeighborhoodRoughSet|pima|0.27999999999999997|{0, 1, 2, 3, 4, 5, 6, 7}|0.4583333333333333|3.8799352645874023
+2023-03-05 19:04:26|VariableRadiusNeighborhoodRoughSet|pima|0.3|{0, 1, 2, 3, 4, 5, 6, 7}|0.3658854166666667|4.178133249282837
+2023-03-05 19:04:30|VariableRadiusNeighborhoodRoughSet|pima|0.32|{0, 1, 2, 3, 4, 5, 6, 7}|0.28515625|4.396650791168213
+2023-03-05 19:04:35|VariableRadiusNeighborhoodRoughSet|pima|0.34|{0, 1, 2, 3, 4, 5, 6, 7}|0.23046875|4.655092477798462
+2023-03-05 19:04:39|VariableRadiusNeighborhoodRoughSet|pima|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7}|0.17578125|4.819351673126221
+2023-03-05 19:04:44|VariableRadiusNeighborhoodRoughSet|pima|0.38000000000000006|{3}|0.0013020833333333333|2.780083179473877
+2023-03-05 19:04:47|VariableRadiusNeighborhoodRoughSet|pima|0.4000000000000001|{0, 1, 2, 3, 4, 5, 6, 7}|0.09505208333333333|5.718848466873169

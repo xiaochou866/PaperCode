@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.02|{8, 1, 0}|1.0|0.010224103927612305
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.04|{8, 1, 4, 0}|1.0|0.012234210968017578
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.06|{8, 1, 4, 0}|1.0|0.012003660202026367
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.08|{1, 2, 3, 6, 8}|1.0|0.01401519775390625
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.1|{1, 2, 3, 6, 8}|1.0|0.014036178588867188
+2023-03-05 11:01:11|NeighborhoodRoughSet|fertility_Diagnosis|0.12000000000000001|{1, 2, 3, 6, 8}|1.0|0.014693260192871094
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.14|{0, 1, 2, 3, 6, 8}|1.0|0.016679763793945312
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.16|{0, 2, 4, 5, 6, 7}|1.0|0.016150474548339844
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.18|{0, 2, 4, 5, 6, 7}|1.0|0.015236616134643555
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.19999999999999998|{0, 2, 4, 5, 6, 7}|1.0|0.014977455139160156
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.21999999999999997|{0, 2, 4, 5, 6, 7}|1.0|0.015436172485351562
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.23999999999999996|{0, 2, 4, 5, 6, 7}|1.0|0.015824556350708008
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.25999999999999995|{0, 2, 3, 4, 5, 6, 7, 8}|1.0|0.017534255981445312
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.27999999999999997|{0, 2, 3, 4, 5, 6, 7, 8}|1.0|0.018690824508666992
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.3|{0, 1, 2, 4, 5, 6, 7, 8}|1.0|0.019591093063354492
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.32|{0, 2, 3, 4, 5, 6, 7, 8}|0.98|0.018851757049560547
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.34|{0, 2, 3, 4, 5, 6, 7, 8}|0.98|0.021395444869995117
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.36000000000000004|{0, 1, 2, 4, 5, 6, 7, 8}|0.98|0.02233743667602539
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.38000000000000006|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.98|0.0215609073638916
+2023-03-05 11:01:12|NeighborhoodRoughSet|fertility_Diagnosis|0.4000000000000001|{0, 2, 3, 4, 5, 6, 7, 8}|0.97|0.021402359008789062

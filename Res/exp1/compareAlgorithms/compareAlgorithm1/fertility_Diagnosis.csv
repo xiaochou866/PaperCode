@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 14:51:24|AttributeGroupAttributeReduction|fertility_Diagnosis|0.02|{1, 6}|0.71|0.12524890899658203
+2023-03-05 14:51:24|AttributeGroupAttributeReduction|fertility_Diagnosis|0.04|{1, 6}|0.73|0.12397909164428711
+2023-03-05 14:51:25|AttributeGroupAttributeReduction|fertility_Diagnosis|0.06|{1, 6}|0.73|0.13852453231811523
+2023-03-05 14:51:25|AttributeGroupAttributeReduction|fertility_Diagnosis|0.08|{1, 4, 6}|0.81|0.13025474548339844
+2023-03-05 14:51:25|AttributeGroupAttributeReduction|fertility_Diagnosis|0.1|{1, 4, 6}|0.81|0.12210702896118164
+2023-03-05 14:51:25|AttributeGroupAttributeReduction|fertility_Diagnosis|0.12000000000000001|{1, 4, 6}|0.81|0.12167143821716309
+2023-03-05 14:51:26|AttributeGroupAttributeReduction|fertility_Diagnosis|0.14|{0, 1, 4, 6}|0.78|0.1284952163696289
+2023-03-05 14:51:26|AttributeGroupAttributeReduction|fertility_Diagnosis|0.16|{1, 6}|0.68|0.11751818656921387
+2023-03-05 14:51:26|AttributeGroupAttributeReduction|fertility_Diagnosis|0.18|{1, 6}|0.68|0.1420278549194336
+2023-03-05 14:51:27|AttributeGroupAttributeReduction|fertility_Diagnosis|0.19999999999999998|{1, 3, 4, 5}|0.81|0.15382122993469238
+2023-03-05 14:51:27|AttributeGroupAttributeReduction|fertility_Diagnosis|0.21999999999999997|{1, 3, 4, 5}|0.81|0.1659531593322754
+2023-03-05 14:51:27|AttributeGroupAttributeReduction|fertility_Diagnosis|0.23999999999999996|{0, 1, 2, 4, 5}|0.73|0.16545724868774414
+2023-03-05 14:51:28|AttributeGroupAttributeReduction|fertility_Diagnosis|0.25999999999999995|{1, 4, 5, 6}|0.77|0.14119648933410645
+2023-03-05 14:51:28|AttributeGroupAttributeReduction|fertility_Diagnosis|0.27999999999999997|{1, 4, 5, 6}|0.77|0.15543103218078613
+2023-03-05 14:51:28|AttributeGroupAttributeReduction|fertility_Diagnosis|0.3|{1, 5}|0.59|0.09261417388916016
+2023-03-05 14:51:28|AttributeGroupAttributeReduction|fertility_Diagnosis|0.32|{1, 5}|0.62|0.12413239479064941
+2023-03-05 14:51:29|AttributeGroupAttributeReduction|fertility_Diagnosis|0.34|{1, 5}|0.62|0.09472012519836426
+2023-03-05 14:51:29|AttributeGroupAttributeReduction|fertility_Diagnosis|0.36000000000000004|{8, 3, 4, 5}|0.69|0.16183805465698242
+2023-03-05 14:51:29|AttributeGroupAttributeReduction|fertility_Diagnosis|0.38000000000000006|{8, 3, 4, 5}|0.69|0.15827131271362305
+2023-03-05 14:51:30|AttributeGroupAttributeReduction|fertility_Diagnosis|0.4000000000000001|{8, 3, 4, 5}|0.71|0.1403486728668213

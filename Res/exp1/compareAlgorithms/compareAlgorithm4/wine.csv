@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:28:39|VariableRadiusNeighborhoodRoughSet|wine|0.02|{9, 2}|1.0|0.07463407516479492
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.04|{9, 6}|1.0|0.08185219764709473
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.06|{0, 11, 12}|1.0|0.10956430435180664
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.08|{0, 11, 12}|1.0|0.11024594306945801
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.1|{0, 11, 12}|1.0|0.12731456756591797
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.12000000000000001|{0, 11, 12}|1.0|0.12752532958984375
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.14|{8, 0, 11, 12}|1.0|0.14947819709777832
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.16|{8, 0, 11, 12}|1.0|0.16930150985717773
+2023-03-05 18:28:40|VariableRadiusNeighborhoodRoughSet|wine|0.18|{9, 11, 12, 7}|1.0|0.18767166137695312
+2023-03-05 18:28:41|VariableRadiusNeighborhoodRoughSet|wine|0.19999999999999998|{0, 10, 12, 6}|1.0|0.19336199760437012
+2023-03-05 18:28:41|VariableRadiusNeighborhoodRoughSet|wine|0.21999999999999997|{1, 10, 11, 12}|1.0|0.18729209899902344
+2023-03-05 18:28:41|VariableRadiusNeighborhoodRoughSet|wine|0.23999999999999996|{0, 2, 8, 11, 12}|1.0|0.21150803565979004
+2023-03-05 18:28:41|VariableRadiusNeighborhoodRoughSet|wine|0.25999999999999995|{0, 2, 8, 11, 12}|1.0|0.22884154319763184
+2023-03-05 18:28:41|VariableRadiusNeighborhoodRoughSet|wine|0.27999999999999997|{0, 1, 4, 11, 12}|1.0|0.22671175003051758
+2023-03-05 18:28:42|VariableRadiusNeighborhoodRoughSet|wine|0.3|{0, 1, 10, 11, 12}|1.0|0.2660200595855713
+2023-03-05 18:28:42|VariableRadiusNeighborhoodRoughSet|wine|0.32|{0, 1, 10, 11, 12}|1.0|0.25423216819763184
+2023-03-05 18:28:42|VariableRadiusNeighborhoodRoughSet|wine|0.34|{0, 1, 2, 10, 11, 12}|1.0|0.27260446548461914
+2023-03-05 18:28:42|VariableRadiusNeighborhoodRoughSet|wine|0.36000000000000004|{0, 1, 6, 10, 11, 12}|1.0|0.28177690505981445
+2023-03-05 18:28:43|VariableRadiusNeighborhoodRoughSet|wine|0.38000000000000006|{0, 1, 2, 6, 9, 11, 12}|1.0|0.29923343658447266
+2023-03-05 18:28:43|VariableRadiusNeighborhoodRoughSet|wine|0.4000000000000001|{0, 4, 6, 10, 11, 12}|1.0|0.28871726989746094

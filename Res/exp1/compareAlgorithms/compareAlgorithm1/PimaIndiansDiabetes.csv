@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 14:55:37|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.02|{0, 5, 30}|0.7037037037037037|2.0992751121520996
+2023-03-05 14:55:39|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.04|{0, 4, 5}|0.7834757834757835|2.1833574771881104
+2023-03-05 14:55:41|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.06|{4, 5, 23}|0.7863247863247863|2.18902325630188
+2023-03-05 14:55:44|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.08|{5, 13, 22}|0.7663817663817664|2.170762538909912
+2023-03-05 14:55:46|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.1|{2, 3, 30}|0.8176638176638177|2.4594807624816895
+2023-03-05 14:55:49|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.12000000000000001|{2, 30, 15}|0.8205128205128205|2.318305492401123
+2023-03-05 14:55:51|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.14|{8, 4, 13, 23}|0.811965811965812|2.6291184425354004
+2023-03-05 14:55:54|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.16|{5, 4, 28, 31}|0.8148148148148148|2.722463607788086
+2023-03-05 14:55:57|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.18|{27, 4, 28, 15}|0.8290598290598291|2.67863130569458
+2023-03-05 14:56:00|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.19999999999999998|{27, 2, 18, 13}|0.7549857549857549|2.657330274581909
+2023-03-05 14:56:03|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.21999999999999997|{33, 2, 8, 13, 17}|0.7464387464387464|2.890831232070923
+2023-03-05 14:56:06|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.23999999999999996|{0, 32, 33, 4, 10, 17}|0.7435897435897436|3.350447416305542
+2023-03-05 14:56:09|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.25999999999999995|{33, 3, 4, 10, 17, 28}|0.7065527065527065|2.8984334468841553
+2023-03-05 14:56:12|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.27999999999999997|{0, 2, 3, 16, 23, 31}|0.6951566951566952|3.305579423904419
+2023-03-05 14:56:16|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.3|{0, 33, 2, 3, 9, 14, 21, 26}|0.7037037037037037|3.6219756603240967
+2023-03-05 14:56:20|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.32|{0, 32, 2, 9, 18, 24, 25, 29}|0.5783475783475783|3.469196319580078
+2023-03-05 14:56:23|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.34|{0, 33, 2, 8, 9, 13, 19, 30}|0.6723646723646723|3.539132833480835
+2023-03-05 14:56:27|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.36000000000000004|{0, 33, 2, 3, 8, 9, 13, 21, 28, 30}|0.6923076923076923|3.4417145252227783
+2023-03-05 14:56:31|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.38000000000000006|{0, 3, 4, 15, 18, 21, 26, 29, 30}|0.6695156695156695|3.6753454208374023
+2023-03-05 14:56:34|AttributeGroupAttributeReduction|PimaIndiansDiabetes|0.4000000000000001|{0, 18, 4, 31}|0.37037037037037035|2.804917097091675

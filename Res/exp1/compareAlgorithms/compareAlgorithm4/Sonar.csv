@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:29:30|VariableRadiusNeighborhoodRoughSet|Sonar|0.02|{0, 11, 20}|1.0|1.0721588134765625
+2023-03-05 18:29:31|VariableRadiusNeighborhoodRoughSet|Sonar|0.04|{10, 43, 20}|1.0|1.078258991241455
+2023-03-05 18:29:32|VariableRadiusNeighborhoodRoughSet|Sonar|0.06|{3, 43, 20, 28}|1.0|1.37418794631958
+2023-03-05 18:29:33|VariableRadiusNeighborhoodRoughSet|Sonar|0.08|{17, 10, 43, 14}|1.0|1.4020261764526367
+2023-03-05 18:29:35|VariableRadiusNeighborhoodRoughSet|Sonar|0.1|{35, 21, 8, 43, 29}|1.0|1.776641607284546
+2023-03-05 18:29:36|VariableRadiusNeighborhoodRoughSet|Sonar|0.12000000000000001|{3, 21, 10, 43, 15}|1.0|1.8900575637817383
+2023-03-05 18:29:38|VariableRadiusNeighborhoodRoughSet|Sonar|0.14|{16, 1, 35, 7, 26, 11}|1.0|2.3353545665740967
+2023-03-05 18:29:41|VariableRadiusNeighborhoodRoughSet|Sonar|0.16|{1, 4, 53, 7, 25, 11, 14}|1.0|2.6658143997192383
+2023-03-05 18:29:43|VariableRadiusNeighborhoodRoughSet|Sonar|0.18|{35, 20, 7, 26, 43, 29}|1.0|2.498385190963745
+2023-03-05 18:29:46|VariableRadiusNeighborhoodRoughSet|Sonar|0.19999999999999998|{0, 20, 43, 10, 27, 29, 25}|1.0|2.703572988510132
+2023-03-05 18:29:49|VariableRadiusNeighborhoodRoughSet|Sonar|0.21999999999999997|{0, 36, 21, 25, 10, 27, 44}|1.0|2.9021966457366943
+2023-03-05 18:29:51|VariableRadiusNeighborhoodRoughSet|Sonar|0.23999999999999996|{0, 1, 34, 9, 44, 16, 19, 26, 28}|1.0|3.399529457092285
+2023-03-05 18:29:55|VariableRadiusNeighborhoodRoughSet|Sonar|0.25999999999999995|{1, 18, 35, 22, 25, 10, 43, 15}|1.0|3.1776702404022217
+2023-03-05 18:29:58|VariableRadiusNeighborhoodRoughSet|Sonar|0.27999999999999997|{0, 35, 39, 10, 44, 21, 23, 25, 29}|1.0|3.6741271018981934
+2023-03-05 18:30:02|VariableRadiusNeighborhoodRoughSet|Sonar|0.3|{0, 32, 2, 35, 11, 48, 21, 54, 23, 27}|1.0|4.008999824523926
+2023-03-05 18:30:06|VariableRadiusNeighborhoodRoughSet|Sonar|0.32|{0, 35, 7, 10, 11, 48, 20, 52, 54, 22, 26}|1.0|4.42020845413208
+2023-03-05 18:30:10|VariableRadiusNeighborhoodRoughSet|Sonar|0.34|{0, 35, 11, 47, 16, 52, 21, 54, 24, 27, 30}|1.0|4.6583099365234375
+2023-03-05 18:30:15|VariableRadiusNeighborhoodRoughSet|Sonar|0.36000000000000004|{0, 35, 11, 47, 16, 21, 54, 24, 27, 28, 30}|0.9951923076923077|4.716712951660156
+2023-03-05 18:30:19|VariableRadiusNeighborhoodRoughSet|Sonar|0.38000000000000006|{0, 33, 35, 3, 38, 7, 40, 10, 47, 19, 54, 22, 26, 29}|1.0|5.471500635147095
+2023-03-05 18:30:25|VariableRadiusNeighborhoodRoughSet|Sonar|0.4000000000000001|{0, 33, 34, 36, 8, 10, 11, 44, 19, 21, 22, 24, 27, 28, 31}|1.0|5.1886444091796875

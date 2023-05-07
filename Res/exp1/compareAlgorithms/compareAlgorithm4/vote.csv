@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:39:10|VariableRadiusNeighborhoodRoughSet|vote|0.02|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.3378689289093018
+2023-03-05 18:39:12|VariableRadiusNeighborhoodRoughSet|vote|0.04|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.4455935955047607
+2023-03-05 18:39:15|VariableRadiusNeighborhoodRoughSet|vote|0.06|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.3650622367858887
+2023-03-05 18:39:17|VariableRadiusNeighborhoodRoughSet|vote|0.08|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.355052947998047
+2023-03-05 18:39:19|VariableRadiusNeighborhoodRoughSet|vote|0.1|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.417825937271118
+2023-03-05 18:39:22|VariableRadiusNeighborhoodRoughSet|vote|0.12000000000000001|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.3049983978271484
+2023-03-05 18:39:24|VariableRadiusNeighborhoodRoughSet|vote|0.14|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.2553822994232178
+2023-03-05 18:39:26|VariableRadiusNeighborhoodRoughSet|vote|0.16|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.348423957824707
+2023-03-05 18:39:29|VariableRadiusNeighborhoodRoughSet|vote|0.18|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.395256996154785
+2023-03-05 18:39:31|VariableRadiusNeighborhoodRoughSet|vote|0.19999999999999998|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.263305187225342
+2023-03-05 18:39:33|VariableRadiusNeighborhoodRoughSet|vote|0.21999999999999997|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.2323191165924072
+2023-03-05 18:39:36|VariableRadiusNeighborhoodRoughSet|vote|0.23999999999999996|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.2729156017303467
+2023-03-05 18:39:38|VariableRadiusNeighborhoodRoughSet|vote|0.25999999999999995|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.3029403686523438
+2023-03-05 18:39:40|VariableRadiusNeighborhoodRoughSet|vote|0.27999999999999997|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.3613064289093018
+2023-03-05 18:39:43|VariableRadiusNeighborhoodRoughSet|vote|0.3|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.191169261932373
+2023-03-05 18:39:45|VariableRadiusNeighborhoodRoughSet|vote|0.32|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.2286078929901123
+2023-03-05 18:39:47|VariableRadiusNeighborhoodRoughSet|vote|0.34|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.327706813812256
+2023-03-05 18:39:49|VariableRadiusNeighborhoodRoughSet|vote|0.36000000000000004|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.441807985305786
+2023-03-05 18:39:52|VariableRadiusNeighborhoodRoughSet|vote|0.38000000000000006|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.428434371948242
+2023-03-05 18:39:54|VariableRadiusNeighborhoodRoughSet|vote|0.4000000000000001|{0, 1, 2, 3, 6, 8, 9, 10, 13, 14, 15}|1.0|2.434014081954956

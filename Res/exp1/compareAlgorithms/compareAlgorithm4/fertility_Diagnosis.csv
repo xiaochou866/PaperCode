@@ -1,0 +1,41 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.02|{8, 1, 0}|100|0.02401447296142578
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.04|{8, 1, 0}|100|0.024049043655395508
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.06|{8, 1, 4, 0}|100|0.02695322036743164
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.08|{8, 1, 5, 6}|98|0.027465105056762695
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.1|{1, 2, 3, 6, 8}|100|0.03267812728881836
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.12000000000000001|{1, 2, 3, 6, 8}|100|0.03141140937805176
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.14|{0, 1, 2, 3, 6, 8}|100|0.03423357009887695
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.16|{0, 1, 2, 3, 5, 6, 8}|100|0.03661704063415527
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.18|{0, 1, 5, 6, 8}|97|0.03685259819030762
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.19999999999999998|{0, 1, 2, 4, 5, 6, 8}|100|0.04040360450744629
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.21999999999999997|{0, 1, 2, 4, 5, 6, 8}|100|0.039107322692871094
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.23999999999999996|{0, 2, 4, 5, 6, 7}|100|0.035472869873046875
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.25999999999999995|{0, 2, 3, 4, 5, 6, 7}|100|0.03885054588317871
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.27999999999999997|{0, 2, 3, 5, 6, 7, 8}|100|0.040085792541503906
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.3|{0, 2, 3, 5, 6, 7, 8}|100|0.044058799743652344
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.32|{0, 2, 3, 5, 6, 7, 8}|100|0.04030418395996094
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.34|{0, 1, 2, 3, 5, 6, 7, 8}|100|0.04188799858093262
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7, 8}|98|0.04201793670654297
+2023-03-05 15:13:56|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.38000000000000006|{0, 1, 2, 3, 4, 5, 6, 7, 8}|98|0.050984859466552734
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.4000000000000001|{0, 2, 3, 4, 5, 6, 7, 8}|97|0.044144630432128906
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.02|{8, 1, 0}|1.0|0.03148031234741211
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.04|{8, 1, 0}|1.0|0.029491186141967773
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.06|{8, 1, 4, 0}|1.0|0.03299593925476074
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.08|{8, 1, 5, 6}|0.98|0.03696584701538086
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.1|{1, 2, 3, 6, 8}|1.0|0.05121612548828125
+2023-03-05 18:28:36|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.12000000000000001|{1, 2, 3, 6, 8}|1.0|0.04196667671203613
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.14|{0, 1, 2, 3, 6, 8}|1.0|0.04750490188598633
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.16|{0, 1, 2, 3, 5, 6, 8}|1.0|0.05102348327636719
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.18|{0, 1, 5, 6, 8}|0.97|0.05176115036010742
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.19999999999999998|{0, 1, 2, 4, 5, 6, 8}|1.0|0.04834270477294922
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.21999999999999997|{0, 1, 2, 4, 5, 6, 8}|1.0|0.048729658126831055
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.23999999999999996|{0, 2, 4, 5, 6, 7}|1.0|0.03845095634460449
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.25999999999999995|{0, 2, 3, 4, 5, 6, 7}|1.0|0.044498443603515625
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.27999999999999997|{0, 2, 3, 5, 6, 7, 8}|1.0|0.046045541763305664
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.3|{0, 2, 3, 5, 6, 7, 8}|1.0|0.04883265495300293
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.32|{0, 2, 3, 5, 6, 7, 8}|1.0|0.05515027046203613
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.34|{0, 1, 2, 3, 5, 6, 7, 8}|1.0|0.0568695068359375
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.98|0.055570125579833984
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.38000000000000006|{0, 1, 2, 3, 4, 5, 6, 7, 8}|0.98|0.05552411079406738
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|fertility_Diagnosis|0.4000000000000001|{0, 2, 3, 4, 5, 6, 7, 8}|0.97|0.05138897895812988

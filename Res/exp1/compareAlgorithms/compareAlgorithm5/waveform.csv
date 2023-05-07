@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:29:17|RandomSamplingAttribureReduction|waveform|0.02|{2, 3, 4, 10, 16}|1.0|33.92023277282715
+2023-03-05 15:29:51|RandomSamplingAttribureReduction|waveform|0.04|{0}|0.2|22.509719133377075
+2023-03-05 15:30:14|RandomSamplingAttribureReduction|waveform|0.06|{0}|0.2|27.903279304504395
+2023-03-05 15:30:43|RandomSamplingAttribureReduction|waveform|0.08|{0}|0.2|32.57880401611328
+2023-03-05 15:31:15|RandomSamplingAttribureReduction|waveform|0.1|{0}|0.2|29.53363847732544
+2023-03-05 15:31:45|RandomSamplingAttribureReduction|waveform|0.12000000000000001|{0}|0.2|49.09288763999939
+2023-03-05 15:32:35|RandomSamplingAttribureReduction|waveform|0.14|{0}|0.2|79.95402789115906
+2023-03-05 15:33:55|RandomSamplingAttribureReduction|waveform|0.16|{0}|0.2|68.7810070514679
+2023-03-05 15:35:04|RandomSamplingAttribureReduction|waveform|0.18|{0}|0.2|80.29048275947571
+2023-03-05 15:36:25|RandomSamplingAttribureReduction|waveform|0.19999999999999998|{0}|0.2|96.77667307853699
+2023-03-05 15:38:02|RandomSamplingAttribureReduction|waveform|0.21999999999999997|{0}|0.2|93.51022052764893
+2023-03-05 15:39:36|RandomSamplingAttribureReduction|waveform|0.23999999999999996|{0}|0.2|101.15922093391418
+2023-03-05 15:41:17|RandomSamplingAttribureReduction|waveform|0.25999999999999995|{0}|0.2|114.7214138507843
+2023-03-05 15:43:12|RandomSamplingAttribureReduction|waveform|0.27999999999999997|{0}|0.2|130.2280149459839
+2023-03-05 15:45:23|RandomSamplingAttribureReduction|waveform|0.3|{0}|0.2|179.30083060264587
+2023-03-05 15:48:23|RandomSamplingAttribureReduction|waveform|0.32|{0}|0.2|162.85544610023499
+2023-03-05 15:51:07|RandomSamplingAttribureReduction|waveform|0.34|{0}|0.2|139.10861921310425
+2023-03-05 15:53:26|RandomSamplingAttribureReduction|waveform|0.36000000000000004|{0}|0.2|246.6055393218994
+2023-03-05 15:57:34|RandomSamplingAttribureReduction|waveform|0.38000000000000006|{0}|0.2|270.01227283477783
+2023-03-05 16:02:05|RandomSamplingAttribureReduction|waveform|0.4000000000000001|{0}|0.2|279.3405923843384

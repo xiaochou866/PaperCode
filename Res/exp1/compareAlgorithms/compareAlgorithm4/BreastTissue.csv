@@ -1,0 +1,41 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.02|{0, 2}|106|0.026601552963256836
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.04|{1, 2, 3}|106|0.03763771057128906
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.06|{0, 2, 3}|106|0.05096554756164551
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.08|{0, 2, 3}|106|0.039215803146362305
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.1|{0, 1, 2, 3, 6, 8}|106|0.07286262512207031
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.12000000000000001|{0, 1, 2, 3, 4, 6, 7, 8}|101|0.07922768592834473
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.14|{0, 1, 2, 3, 4, 6, 7, 8}|86|0.06682348251342773
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.16|{0, 1, 2, 3, 4, 6, 7, 8}|77|0.0695648193359375
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.18|{0, 1, 2, 3, 4, 6, 7, 8}|68|0.08940792083740234
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.19999999999999998|{0, 1, 2, 3, 6, 8}|61|0.08807158470153809
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.21999999999999997|{0, 1, 2, 3, 4, 6, 7, 8}|60|0.10126519203186035
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.23999999999999996|{0, 1, 2, 3, 4, 6, 7, 8}|58|0.07631635665893555
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.25999999999999995|{0, 1, 2, 3, 4, 6, 7, 8}|55|0.08517742156982422
+2023-03-05 15:13:57|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.27999999999999997|{0, 1, 2, 3, 4, 6, 7, 8}|53|0.08240461349487305
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.3|{0, 1, 2, 3, 4, 6, 7, 8}|50|0.08626222610473633
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.32|{0, 1, 2, 3, 4, 6, 8}|46|0.0746607780456543
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.34|{0, 1, 2, 3, 6, 8}|44|0.0760352611541748
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.36000000000000004|{0, 1, 2, 3, 4, 6, 8}|44|0.07761359214782715
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.38000000000000006|{0, 1, 2, 3, 4, 6, 7, 8}|44|0.08546018600463867
+2023-03-05 15:13:58|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.4000000000000001|{0, 1, 2, 3, 4, 6, 7, 8}|43|0.08602190017700195
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.02|{0, 2}|1.0|0.03200125694274902
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.04|{1, 2, 3}|1.0|0.041518449783325195
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.06|{0, 2, 3}|1.0|0.046001434326171875
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.08|{0, 2, 3}|1.0|0.056490182876586914
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.1|{0, 1, 2, 3, 6, 8}|1.0|0.0716402530670166
+2023-03-05 18:28:37|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.12000000000000001|{0, 1, 2, 3, 4, 6, 7, 8}|0.9528301886792453|0.07973790168762207
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.14|{0, 1, 2, 3, 4, 6, 7, 8}|0.8113207547169812|0.08250069618225098
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.16|{0, 1, 2, 3, 4, 6, 7, 8}|0.7264150943396226|0.08387517929077148
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.18|{0, 1, 2, 3, 4, 6, 7, 8}|0.6415094339622641|0.08468127250671387
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.19999999999999998|{0, 1, 2, 3, 6, 8}|0.5754716981132075|0.08360433578491211
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.21999999999999997|{0, 1, 2, 3, 4, 6, 7, 8}|0.5660377358490566|0.0947730541229248
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.23999999999999996|{0, 1, 2, 3, 4, 6, 7, 8}|0.5471698113207547|0.08659577369689941
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.25999999999999995|{0, 1, 2, 3, 4, 6, 7, 8}|0.5188679245283019|0.08858633041381836
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.27999999999999997|{0, 1, 2, 3, 4, 6, 7, 8}|0.5|0.10827159881591797
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.3|{0, 1, 2, 3, 4, 6, 7, 8}|0.4716981132075472|0.09810376167297363
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.32|{0, 1, 2, 3, 4, 6, 8}|0.4339622641509434|0.09554553031921387
+2023-03-05 18:28:38|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.34|{0, 1, 2, 3, 6, 8}|0.41509433962264153|0.1029820442199707
+2023-03-05 18:28:39|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.36000000000000004|{0, 1, 2, 3, 4, 6, 8}|0.41509433962264153|0.09637904167175293
+2023-03-05 18:28:39|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.38000000000000006|{0, 1, 2, 3, 4, 6, 7, 8}|0.41509433962264153|0.10651135444641113
+2023-03-05 18:28:39|VariableRadiusNeighborhoodRoughSet|BreastTissue|0.4000000000000001|{0, 1, 2, 3, 4, 6, 7, 8}|0.4056603773584906|0.10289335250854492

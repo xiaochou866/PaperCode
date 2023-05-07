@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 19:13:02|VariableRadiusNeighborhoodRoughSet|data_banknote|0.02|{0, 1, 2}|1.0|0.7020318508148193
+2023-03-05 19:13:02|VariableRadiusNeighborhoodRoughSet|data_banknote|0.04|{0, 1, 2, 3}|1.0|0.8022313117980957
+2023-03-05 19:13:03|VariableRadiusNeighborhoodRoughSet|data_banknote|0.06|{0, 1, 2, 3}|1.0|1.0652449131011963
+2023-03-05 19:13:04|VariableRadiusNeighborhoodRoughSet|data_banknote|0.08|{0, 1, 2, 3}|0.9963556851311953|1.4493813514709473
+2023-03-05 19:13:06|VariableRadiusNeighborhoodRoughSet|data_banknote|0.1|{0, 1, 2, 3}|0.9897959183673469|1.5196561813354492
+2023-03-05 19:13:07|VariableRadiusNeighborhoodRoughSet|data_banknote|0.12000000000000001|{0, 1, 2, 3}|0.9817784256559767|1.722259283065796
+2023-03-05 19:13:09|VariableRadiusNeighborhoodRoughSet|data_banknote|0.14|{0, 1, 2, 3}|0.9766763848396501|1.873729944229126
+2023-03-05 19:13:11|VariableRadiusNeighborhoodRoughSet|data_banknote|0.16|{0, 1, 2, 3}|0.9701166180758017|1.8820276260375977
+2023-03-05 19:13:13|VariableRadiusNeighborhoodRoughSet|data_banknote|0.18|{0, 1, 2, 3}|0.956997084548105|2.045851707458496
+2023-03-05 19:13:15|VariableRadiusNeighborhoodRoughSet|data_banknote|0.19999999999999998|{0, 1, 2, 3}|0.9183673469387755|2.1017885208129883
+2023-03-05 19:13:17|VariableRadiusNeighborhoodRoughSet|data_banknote|0.21999999999999997|{0, 1, 2, 3}|0.8709912536443148|2.523715019226074
+2023-03-05 19:13:19|VariableRadiusNeighborhoodRoughSet|data_banknote|0.23999999999999996|{0, 1, 2, 3}|0.8024781341107872|2.5538370609283447
+2023-03-05 19:13:22|VariableRadiusNeighborhoodRoughSet|data_banknote|0.25999999999999995|{0, 1, 2, 3}|0.7354227405247813|2.5355072021484375
+2023-03-05 19:13:24|VariableRadiusNeighborhoodRoughSet|data_banknote|0.27999999999999997|{0, 1, 2, 3}|0.6428571428571429|3.1365320682525635
+2023-03-05 19:13:28|VariableRadiusNeighborhoodRoughSet|data_banknote|0.3|{0, 1, 2, 3}|0.5408163265306123|3.1564064025878906
+2023-03-05 19:13:31|VariableRadiusNeighborhoodRoughSet|data_banknote|0.32|{0, 1, 2, 3}|0.4387755102040816|3.320091485977173
+2023-03-05 19:13:34|VariableRadiusNeighborhoodRoughSet|data_banknote|0.34|{0, 1, 2, 3}|0.3170553935860058|3.505039691925049
+2023-03-05 19:13:38|VariableRadiusNeighborhoodRoughSet|data_banknote|0.36000000000000004|{0, 1, 2, 3}|0.23396501457725946|3.8639774322509766
+2023-03-05 19:13:41|VariableRadiusNeighborhoodRoughSet|data_banknote|0.38000000000000006|{0, 1, 2, 3}|0.16472303206997085|4.062438488006592
+2023-03-05 19:13:45|VariableRadiusNeighborhoodRoughSet|data_banknote|0.4000000000000001|{0, 1, 2, 3}|0.11661807580174927|4.332353115081787

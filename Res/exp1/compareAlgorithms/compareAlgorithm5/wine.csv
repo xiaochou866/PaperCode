@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.02|{2, 3, 4}|1.0|0.03430294990539551
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.04|{1, 3, 4}|1.0|0.0416719913482666
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.06|{1, 2, 3, 4}|1.0|0.03927016258239746
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.08|{0, 1, 2, 12}|1.0|0.03504300117492676
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.1|{1, 2, 3, 4, 12}|1.0|0.03652834892272949
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.12000000000000001|{0, 1, 2, 4, 12}|1.0|0.038794517517089844
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.14|{0, 1, 4, 6, 12}|1.0|0.03824496269226074
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.16|{0, 1, 4, 6, 12}|1.0|0.03789997100830078
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.18|{0, 1, 3, 4, 6, 12}|1.0|0.03970646858215332
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.19999999999999998|{0, 2, 4, 6, 10, 12}|1.0|0.04736161231994629
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.21999999999999997|{0, 1, 2, 3, 4, 11, 12}|1.0|0.05037093162536621
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.23999999999999996|{0, 1, 2, 3, 5, 8, 9, 12}|1.0|0.05530095100402832
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.25999999999999995|{0, 1, 3, 4, 5, 8, 9, 12}|1.0|0.05910229682922363
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.27999999999999997|{0, 1, 2, 3, 4, 5, 6, 9, 12}|1.0|0.057775259017944336
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.3|{0, 1, 3, 4, 7, 8, 11, 12}|1.0|0.053484439849853516
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.32|{0, 1, 3, 4, 6, 8, 9, 11, 12}|1.0|0.05862307548522949
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.34|{0, 1, 2, 4, 6, 8, 9, 10, 11, 12}|1.0|0.05337214469909668
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 8, 9, 11, 12}|1.0|0.05017709732055664
+2023-03-05 15:23:57|RandomSamplingAttribureReduction|wine|0.38000000000000006|{0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12}|1.0|0.06337356567382812
+2023-03-05 15:23:58|RandomSamplingAttribureReduction|wine|0.4000000000000001|{0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12}|0.9831460674157303|0.05736732482910156

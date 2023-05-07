@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:31:08|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.02|{19, 4, 5}|1.0|1.2444524765014648
+2023-03-05 18:31:09|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.04|{2, 19, 13, 22}|1.0|1.6021745204925537
+2023-03-05 18:31:11|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.06|{3, 2, 27, 30}|1.0|1.7671313285827637
+2023-03-05 18:31:12|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.08|{2, 4, 7, 27, 30}|1.0|2.025027275085449
+2023-03-05 18:31:14|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.1|{2, 19, 3, 23, 30}|1.0|2.1070849895477295
+2023-03-05 18:31:16|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.12000000000000001|{2, 19, 3, 4, 23, 30}|1.0|2.5471932888031006
+2023-03-05 18:31:19|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.14|{16, 2, 4, 15, 13, 31}|1.0|2.761995315551758
+2023-03-05 18:31:22|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.16|{0, 33, 2, 3, 4, 7, 23, 12}|1.0|3.6546647548675537
+2023-03-05 18:31:25|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.18|{0, 33, 2, 3, 4, 7, 12, 13, 23}|1.0|4.067004919052124
+2023-03-05 18:31:30|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.19999999999999998|{0, 2, 4, 7, 8, 18, 22, 23, 31}|1.0|4.150205135345459
+2023-03-05 18:31:34|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.21999999999999997|{0, 33, 2, 4, 5, 16, 18, 19, 21, 23}|1.0|4.485973358154297
+2023-03-05 18:31:38|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.23999999999999996|{0, 33, 2, 4, 7, 11, 18, 20, 22, 23}|1.0|4.64113187789917
+2023-03-05 18:31:43|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.25999999999999995|{0, 2, 3, 4, 6, 7, 10, 15, 18, 20, 23, 28, 29}|1.0|5.504716634750366
+2023-03-05 18:31:48|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.27999999999999997|{0, 2, 4, 5, 6, 7, 8, 9, 13, 15, 18, 20, 24, 25, 28, 29}|1.0|6.317499160766602
+2023-03-05 18:31:55|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.3|{0, 2, 3, 4, 5, 6, 7, 9, 10, 12, 13, 15, 16, 17, 18, 23, 28, 33}|1.0|6.786703824996948
+2023-03-05 18:32:01|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.32|{0, 33, 2, 4, 5, 6, 7, 8, 11, 12, 13, 22, 26, 29}|0.9886039886039886|5.926025867462158
+2023-03-05 18:32:07|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.34|{0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 19, 20, 21, 23, 26, 32, 33}|0.9886039886039886|6.880125999450684
+2023-03-05 18:32:14|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.36000000000000004|{0, 32, 2, 33, 4, 5, 3, 7, 13, 16, 23, 26, 27, 29}|0.9715099715099715|6.506072044372559
+2023-03-05 18:32:21|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.38000000000000006|{0, 32, 33, 2, 4, 6, 7, 17, 19, 23, 27, 29}|0.9658119658119658|6.1534106731414795
+2023-03-05 18:32:27|VariableRadiusNeighborhoodRoughSet|PimaIndiansDiabetes|0.4000000000000001|{0, 33, 2, 4, 6, 7, 8, 11, 16, 21, 22, 25, 26, 28, 31}|0.9629629629629629|6.818282842636108

@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:59:42|VariableRadiusNeighborhoodRoughSet|australian|0.02|{1, 2, 4, 9, 12}|1.0|2.850236654281616
+2023-03-05 18:59:44|VariableRadiusNeighborhoodRoughSet|australian|0.04|{0, 1, 2, 4, 5, 6, 9, 10, 12}|1.0|3.8708386421203613
+2023-03-05 18:59:48|VariableRadiusNeighborhoodRoughSet|australian|0.06|{0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13}|1.0|4.891546249389648
+2023-03-05 18:59:53|VariableRadiusNeighborhoodRoughSet|australian|0.08|{0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13}|1.0|5.3615405559539795
+2023-03-05 18:59:59|VariableRadiusNeighborhoodRoughSet|australian|0.1|{0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13}|0.9942028985507246|5.577978610992432
+2023-03-05 19:00:04|VariableRadiusNeighborhoodRoughSet|australian|0.12000000000000001|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9855072463768116|6.306276798248291
+2023-03-05 19:00:10|VariableRadiusNeighborhoodRoughSet|australian|0.14|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9768115942028985|6.566607475280762
+2023-03-05 19:00:17|VariableRadiusNeighborhoodRoughSet|australian|0.16|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9652173913043478|6.907232999801636
+2023-03-05 19:00:24|VariableRadiusNeighborhoodRoughSet|australian|0.18|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}|0.9565217391304348|6.16678524017334
+2023-03-05 19:00:30|VariableRadiusNeighborhoodRoughSet|australian|0.19999999999999998|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9449275362318841|7.842172384262085
+2023-03-05 19:00:38|VariableRadiusNeighborhoodRoughSet|australian|0.21999999999999997|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9304347826086956|8.638948917388916
+2023-03-05 19:00:47|VariableRadiusNeighborhoodRoughSet|australian|0.23999999999999996|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.9130434782608695|7.372771501541138
+2023-03-05 19:00:54|VariableRadiusNeighborhoodRoughSet|australian|0.25999999999999995|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8913043478260869|7.765623331069946
+2023-03-05 19:01:02|VariableRadiusNeighborhoodRoughSet|australian|0.27999999999999997|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.881159420289855|7.6247453689575195
+2023-03-05 19:01:09|VariableRadiusNeighborhoodRoughSet|australian|0.3|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8681159420289855|6.893522262573242
+2023-03-05 19:01:16|VariableRadiusNeighborhoodRoughSet|australian|0.32|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8536231884057971|7.924372434616089
+2023-03-05 19:01:24|VariableRadiusNeighborhoodRoughSet|australian|0.34|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8449275362318841|8.053528785705566
+2023-03-05 19:01:32|VariableRadiusNeighborhoodRoughSet|australian|0.36000000000000004|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8246376811594203|9.041403532028198
+2023-03-05 19:01:41|VariableRadiusNeighborhoodRoughSet|australian|0.38000000000000006|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.8014492753623188|8.24109435081482
+2023-03-05 19:01:50|VariableRadiusNeighborhoodRoughSet|australian|0.4000000000000001|{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}|0.7869565217391304|8.636543035507202

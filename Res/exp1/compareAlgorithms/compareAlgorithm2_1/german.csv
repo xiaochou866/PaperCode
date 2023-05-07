@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 21:08:37|DisSimilarityAttributeReduction|german|0.02|{0, 1, 19, 12, 13, 14}|0.418|90.75553846359253
+2023-03-05 21:10:08|DisSimilarityAttributeReduction|german|0.04|{0, 1, 17, 19, 9, 12}|0.46|91.43444681167603
+2023-03-05 21:11:39|DisSimilarityAttributeReduction|german|0.06|{0, 1, 17, 3, 19, 8, 9, 13}|0.499|92.02489852905273
+2023-03-05 21:13:11|DisSimilarityAttributeReduction|german|0.08|{3, 19, 9, 10, 11, 12, 13, 14}|0.431|92.39672923088074
+2023-03-05 21:14:43|DisSimilarityAttributeReduction|german|0.1|{0, 17, 3, 19, 6, 8, 9, 13}|0.475|93.45519351959229
+2023-03-05 21:16:17|DisSimilarityAttributeReduction|german|0.12000000000000001|{0, 1, 17, 19, 8, 9, 12, 13}|0.475|94.24759411811829
+2023-03-05 21:17:51|DisSimilarityAttributeReduction|german|0.14|{0, 17, 19, 4, 6, 8, 9, 11}|0.523|93.53383755683899
+2023-03-05 21:19:25|DisSimilarityAttributeReduction|german|0.16|{0, 16, 17, 19, 3, 5, 8, 9}|0.471|94.6284110546112
+2023-03-05 21:20:59|DisSimilarityAttributeReduction|german|0.18|{0, 16, 17, 19, 3, 5, 8, 9}|0.471|94.06662726402283
+2023-03-05 21:22:33|DisSimilarityAttributeReduction|german|0.19999999999999998|{0, 16, 17, 19, 3, 5, 8, 9}|0.471|93.98410987854004
+2023-03-05 21:24:07|DisSimilarityAttributeReduction|german|0.21999999999999997|{0, 1, 17, 19, 6, 8, 9, 11}|0.519|93.8003740310669
+2023-03-05 21:25:41|DisSimilarityAttributeReduction|german|0.23999999999999996|{0, 1, 19, 4, 6, 8, 9, 11}|0.531|94.30534410476685
+2023-03-05 21:27:16|DisSimilarityAttributeReduction|german|0.25999999999999995|{0, 1, 3, 5, 10, 11}|0.505|91.85683178901672
+2023-03-05 21:28:47|DisSimilarityAttributeReduction|german|0.27999999999999997|{0, 1, 17, 3, 5, 8, 10, 11}|0.492|91.88483881950378
+2023-03-05 21:30:19|DisSimilarityAttributeReduction|german|0.3|{0, 1, 17, 3, 5, 8, 10, 11}|0.52|91.88171696662903
+2023-03-05 21:31:51|DisSimilarityAttributeReduction|german|0.32|{0, 3, 5, 6, 7, 11}|0.488|90.79421091079712
+2023-03-05 21:33:22|DisSimilarityAttributeReduction|german|0.34|{0, 18, 5, 6, 10, 11, 12, 14}|0.546|76.63107419013977
+2023-03-05 21:34:39|DisSimilarityAttributeReduction|german|0.36000000000000004|{0, 18, 2, 6, 10, 11, 12, 14}|0.544|75.25685048103333
+2023-03-05 21:35:54|DisSimilarityAttributeReduction|german|0.38000000000000006|{0, 1, 18, 2, 6, 10, 11, 14}|0.538|75.51092982292175
+2023-03-05 21:37:09|DisSimilarityAttributeReduction|german|0.4000000000000001|{0, 18, 2, 6, 10, 11, 12, 14}|0.541|76.17746639251709

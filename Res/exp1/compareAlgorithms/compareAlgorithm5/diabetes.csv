@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:26:59|RandomSamplingAttribureReduction|diabetes|0.02|{0, 1, 3, 5}|1.0|0.366375207901001
+2023-03-05 15:26:59|RandomSamplingAttribureReduction|diabetes|0.04|{0, 1, 2, 3, 6}|1.0|0.42078375816345215
+2023-03-05 15:26:59|RandomSamplingAttribureReduction|diabetes|0.06|{0, 1, 2, 3, 5, 7}|1.0|0.4440121650695801
+2023-03-05 15:27:00|RandomSamplingAttribureReduction|diabetes|0.08|{0, 1, 2, 4, 5, 6, 7}|0.9986979166666666|0.45955920219421387
+2023-03-05 15:27:00|RandomSamplingAttribureReduction|diabetes|0.1|{0, 1, 2}|0.6015625|0.36496806144714355
+2023-03-05 15:27:01|RandomSamplingAttribureReduction|diabetes|0.12000000000000001|{0, 1, 2}|0.6015625|0.4141838550567627
+2023-03-05 15:27:01|RandomSamplingAttribureReduction|diabetes|0.14|{0, 1, 2}|0.6015625|0.4704272747039795
+2023-03-05 15:27:02|RandomSamplingAttribureReduction|diabetes|0.16|{0, 1, 2}|0.6015625|0.5239181518554688
+2023-03-05 15:27:02|RandomSamplingAttribureReduction|diabetes|0.18|{0, 1, 2}|0.6015625|0.5876865386962891
+2023-03-05 15:27:03|RandomSamplingAttribureReduction|diabetes|0.19999999999999998|{0, 1, 2}|0.6015625|0.651669979095459
+2023-03-05 15:27:03|RandomSamplingAttribureReduction|diabetes|0.21999999999999997|{0, 1, 2}|0.6015625|0.7086076736450195
+2023-03-05 15:27:04|RandomSamplingAttribureReduction|diabetes|0.23999999999999996|{0, 1, 2}|0.6015625|0.7721285820007324
+2023-03-05 15:27:05|RandomSamplingAttribureReduction|diabetes|0.25999999999999995|{0, 1, 2}|0.6015625|0.8366563320159912
+2023-03-05 15:27:06|RandomSamplingAttribureReduction|diabetes|0.27999999999999997|{0, 1, 2}|0.6015625|0.9100456237792969
+2023-03-05 15:27:07|RandomSamplingAttribureReduction|diabetes|0.3|{0, 1, 2}|0.6015625|0.9683327674865723
+2023-03-05 15:27:08|RandomSamplingAttribureReduction|diabetes|0.32|{0, 1, 2}|0.6015625|1.0124077796936035
+2023-03-05 15:27:09|RandomSamplingAttribureReduction|diabetes|0.34|{0, 1, 2}|0.6015625|1.0469777584075928
+2023-03-05 15:27:10|RandomSamplingAttribureReduction|diabetes|0.36000000000000004|{0, 1, 2}|0.6015625|1.0982306003570557
+2023-03-05 15:27:11|RandomSamplingAttribureReduction|diabetes|0.38000000000000006|{0, 1, 2}|0.6015625|1.1318795680999756
+2023-03-05 15:27:12|RandomSamplingAttribureReduction|diabetes|0.4000000000000001|{0, 1, 2}|0.6015625|1.1538159847259521

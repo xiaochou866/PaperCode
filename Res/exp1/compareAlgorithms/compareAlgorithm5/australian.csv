@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:26:21|RandomSamplingAttribureReduction|australian|0.02|{0, 1, 2, 3, 4, 12}|1.0|0.6950345039367676
+2023-03-05 15:26:22|RandomSamplingAttribureReduction|australian|0.04|{0, 1, 2, 3, 4, 5, 7, 10, 12}|1.0|0.8942599296569824
+2023-03-05 15:26:23|RandomSamplingAttribureReduction|australian|0.06|{0, 1, 2, 4, 5, 8, 10, 11, 12}|1.0|0.995286226272583
+2023-03-05 15:26:24|RandomSamplingAttribureReduction|australian|0.08|{0, 1}|0.4|0.6358964443206787
+2023-03-05 15:26:24|RandomSamplingAttribureReduction|australian|0.1|{0, 1}|0.4|0.7018485069274902
+2023-03-05 15:26:25|RandomSamplingAttribureReduction|australian|0.12000000000000001|{0, 1}|0.4|0.7482154369354248
+2023-03-05 15:26:26|RandomSamplingAttribureReduction|australian|0.14|{0, 1}|0.4|0.8010506629943848
+2023-03-05 15:26:26|RandomSamplingAttribureReduction|australian|0.16|{0, 1}|0.4|0.8430182933807373
+2023-03-05 15:26:27|RandomSamplingAttribureReduction|australian|0.18|{0, 1}|0.4|0.888181209564209
+2023-03-05 15:26:28|RandomSamplingAttribureReduction|australian|0.19999999999999998|{0, 1}|0.4|0.9296860694885254
+2023-03-05 15:26:29|RandomSamplingAttribureReduction|australian|0.21999999999999997|{0, 1}|0.4|0.9522581100463867
+2023-03-05 15:26:30|RandomSamplingAttribureReduction|australian|0.23999999999999996|{0, 1}|0.4|0.985485315322876
+2023-03-05 15:26:31|RandomSamplingAttribureReduction|australian|0.25999999999999995|{0, 1}|0.4|1.0114634037017822
+2023-03-05 15:26:32|RandomSamplingAttribureReduction|australian|0.27999999999999997|{0, 1}|0.4|1.0332324504852295
+2023-03-05 15:26:33|RandomSamplingAttribureReduction|australian|0.3|{0, 1}|0.4|1.0528669357299805
+2023-03-05 15:26:34|RandomSamplingAttribureReduction|australian|0.32|{0, 1}|0.4|1.0737245082855225
+2023-03-05 15:26:35|RandomSamplingAttribureReduction|australian|0.34|{0, 1}|0.4|1.0786657333374023
+2023-03-05 15:26:36|RandomSamplingAttribureReduction|australian|0.36000000000000004|{0, 1}|0.4|1.0960676670074463
+2023-03-05 15:26:37|RandomSamplingAttribureReduction|australian|0.38000000000000006|{0, 1}|0.4|1.1045029163360596
+2023-03-05 15:26:39|RandomSamplingAttribureReduction|australian|0.4000000000000001|{0, 1}|0.4|1.1180658340454102

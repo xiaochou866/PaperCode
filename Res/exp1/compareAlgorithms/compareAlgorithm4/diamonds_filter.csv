@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 18:59:29|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.02|{1, 2}|1.0|0.23655486106872559
+2023-03-05 18:59:29|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.04|{0, 1, 2}|1.0|0.30799245834350586
+2023-03-05 18:59:30|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.06|{0, 1, 2, 3}|1.0|0.2984185218811035
+2023-03-05 18:59:30|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.08|{0, 1, 2, 3}|0.994991652754591|0.3459601402282715
+2023-03-05 18:59:30|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.1|{0, 1, 2, 3}|0.9732888146911519|0.38047266006469727
+2023-03-05 18:59:31|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.12000000000000001|{0, 1, 2, 3}|0.9098497495826378|0.44092702865600586
+2023-03-05 18:59:31|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.14|{0, 1, 2, 3}|0.8580968280467446|0.4633817672729492
+2023-03-05 18:59:32|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.16|{0, 1, 2, 3}|0.7963272120200334|0.5479114055633545
+2023-03-05 18:59:32|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.18|{0, 1, 2, 3}|0.7228714524207012|0.6068723201751709
+2023-03-05 18:59:33|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.19999999999999998|{0, 1, 2, 3}|0.656093489148581|0.6217749118804932
+2023-03-05 18:59:33|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.21999999999999997|{0, 1, 2, 3}|0.5976627712854758|0.6728115081787109
+2023-03-05 18:59:34|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.23999999999999996|{0, 1, 2, 3}|0.4757929883138564|0.6890778541564941
+2023-03-05 18:59:35|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.25999999999999995|{0, 1, 2, 3}|0.4056761268781302|0.727043628692627
+2023-03-05 18:59:35|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.27999999999999997|{0, 1, 2, 3}|0.34223706176961605|0.771733283996582
+2023-03-05 18:59:36|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.3|{0, 1, 2, 3}|0.2838063439065108|0.7974286079406738
+2023-03-05 18:59:37|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.32|{0, 1, 2, 3}|0.2303839732888147|0.8356304168701172
+2023-03-05 18:59:38|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.34|{0, 1, 2, 3}|0.17529215358931552|0.9100608825683594
+2023-03-05 18:59:39|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.36000000000000004|{0, 1, 2, 3}|0.13689482470784642|0.9043962955474854
+2023-03-05 18:59:40|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.38000000000000006|{0, 1, 2, 3}|0.11519198664440734|0.9749457836151123
+2023-03-05 18:59:41|VariableRadiusNeighborhoodRoughSet|diamonds_filter|0.4000000000000001|{0, 1, 2, 3}|0.08347245409015025|0.9872410297393799

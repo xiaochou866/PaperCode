@@ -1,0 +1,41 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 15:07:17|WeightedAttributeReduction|fertility_Diagnosis|0.02|{0, 1}|0.72|0.6013963222503662
+2023-03-05 15:07:17|WeightedAttributeReduction|fertility_Diagnosis|0.04|{0, 1}|0.72|0.598400354385376
+2023-03-05 15:07:18|WeightedAttributeReduction|fertility_Diagnosis|0.06|{0, 1}|0.72|0.5732791423797607
+2023-03-05 15:07:19|WeightedAttributeReduction|fertility_Diagnosis|0.08|{1, 3}|0.75|0.6195366382598877
+2023-03-05 15:07:19|WeightedAttributeReduction|fertility_Diagnosis|0.1|{1, 3}|0.75|0.6304347515106201
+2023-03-05 15:07:20|WeightedAttributeReduction|fertility_Diagnosis|0.12000000000000001|{0, 1, 4}|0.82|0.7721340656280518
+2023-03-05 15:07:21|WeightedAttributeReduction|fertility_Diagnosis|0.14|{0, 1, 4}|0.82|0.8375005722045898
+2023-03-05 15:07:21|WeightedAttributeReduction|fertility_Diagnosis|0.16|{0, 1, 4}|0.82|0.782318115234375
+2023-03-05 15:07:22|WeightedAttributeReduction|fertility_Diagnosis|0.18|{0, 1, 4}|0.82|0.7273123264312744
+2023-03-05 15:07:23|WeightedAttributeReduction|fertility_Diagnosis|0.19999999999999998|{0, 1, 4}|0.82|0.7569069862365723
+2023-03-05 15:07:24|WeightedAttributeReduction|fertility_Diagnosis|0.21999999999999997|{0, 1, 4}|0.84|0.7557046413421631
+2023-03-05 15:07:24|WeightedAttributeReduction|fertility_Diagnosis|0.23999999999999996|{0, 1, 4}|0.84|0.7859907150268555
+2023-03-05 15:07:25|WeightedAttributeReduction|fertility_Diagnosis|0.25999999999999995|{0, 1, 4}|0.84|0.7687280178070068
+2023-03-05 15:07:26|WeightedAttributeReduction|fertility_Diagnosis|0.27999999999999997|{0, 1, 3}|0.84|0.7124145030975342
+2023-03-05 15:07:27|WeightedAttributeReduction|fertility_Diagnosis|0.3|{0, 1, 3}|0.84|0.7966115474700928
+2023-03-05 15:07:27|WeightedAttributeReduction|fertility_Diagnosis|0.32|{0, 1, 3, 6}|0.84|0.8406872749328613
+2023-03-05 15:07:28|WeightedAttributeReduction|fertility_Diagnosis|0.34|{8, 1, 4}|0.84|0.8224003314971924
+2023-03-05 15:07:29|WeightedAttributeReduction|fertility_Diagnosis|0.36000000000000004|{1, 3, 4, 6}|0.83|0.8834998607635498
+2023-03-05 15:07:30|WeightedAttributeReduction|fertility_Diagnosis|0.38000000000000006|{8, 1, 4, 6}|0.83|0.8622632026672363
+2023-03-05 15:07:31|WeightedAttributeReduction|fertility_Diagnosis|0.4000000000000001|{8, 1, 3, 4}|0.83|0.8984665870666504
+2023-03-05 16:39:13|WeightedAttributeReduction|fertility_Diagnosis|0.02|{0, 1}|0.72|0.6211953163146973
+2023-03-05 16:39:14|WeightedAttributeReduction|fertility_Diagnosis|0.04|{0, 1}|0.72|0.6311483383178711
+2023-03-05 16:39:15|WeightedAttributeReduction|fertility_Diagnosis|0.06|{0, 1}|0.72|0.6033921241760254
+2023-03-05 16:39:15|WeightedAttributeReduction|fertility_Diagnosis|0.08|{1, 3}|0.75|0.622506856918335
+2023-03-05 16:39:16|WeightedAttributeReduction|fertility_Diagnosis|0.1|{1, 3}|0.75|0.6414387226104736
+2023-03-05 16:39:17|WeightedAttributeReduction|fertility_Diagnosis|0.12000000000000001|{0, 1, 4}|0.82|0.7700173854827881
+2023-03-05 16:39:17|WeightedAttributeReduction|fertility_Diagnosis|0.14|{0, 1, 4}|0.82|0.7535407543182373
+2023-03-05 16:39:18|WeightedAttributeReduction|fertility_Diagnosis|0.16|{0, 1, 4}|0.82|0.756340503692627
+2023-03-05 16:39:19|WeightedAttributeReduction|fertility_Diagnosis|0.18|{0, 1, 4}|0.82|0.7715926170349121
+2023-03-05 16:39:20|WeightedAttributeReduction|fertility_Diagnosis|0.19999999999999998|{0, 1, 4}|0.82|0.7553267478942871
+2023-03-05 16:39:20|WeightedAttributeReduction|fertility_Diagnosis|0.21999999999999997|{0, 1, 4}|0.84|0.7503900527954102
+2023-03-05 16:39:21|WeightedAttributeReduction|fertility_Diagnosis|0.23999999999999996|{0, 1, 4}|0.84|0.7836077213287354
+2023-03-05 16:39:22|WeightedAttributeReduction|fertility_Diagnosis|0.25999999999999995|{0, 1, 4}|0.84|0.7736766338348389
+2023-03-05 16:39:23|WeightedAttributeReduction|fertility_Diagnosis|0.27999999999999997|{0, 1, 3}|0.84|0.7467131614685059
+2023-03-05 16:39:23|WeightedAttributeReduction|fertility_Diagnosis|0.3|{0, 1, 3}|0.84|0.8301470279693604
+2023-03-05 16:39:24|WeightedAttributeReduction|fertility_Diagnosis|0.32|{0, 1, 3, 6}|0.84|0.9065399169921875
+2023-03-05 16:39:25|WeightedAttributeReduction|fertility_Diagnosis|0.34|{8, 1, 4}|0.84|0.8104085922241211
+2023-03-05 16:39:26|WeightedAttributeReduction|fertility_Diagnosis|0.36000000000000004|{1, 3, 4, 6}|0.83|1.2364764213562012
+2023-03-05 16:39:27|WeightedAttributeReduction|fertility_Diagnosis|0.38000000000000006|{8, 1, 4, 6}|0.83|0.9939165115356445
+2023-03-05 16:39:28|WeightedAttributeReduction|fertility_Diagnosis|0.4000000000000001|{8, 1, 3, 4}|0.83|0.9575750827789307

@@ -1,0 +1,21 @@
+结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.02|{8, 2, 4, 6}|0.71|0.14368987083435059
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.04|{8, 2, 4, 6}|0.72|0.14778947830200195
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.06|{8, 2, 4, 6}|0.72|0.14565777778625488
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.08|{0, 1, 2, 4}|0.8|0.1449289321899414
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.1|{0, 1, 2, 4}|0.79|0.14753293991088867
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.12000000000000001|{0, 1, 2, 4}|0.79|0.14275193214416504
+2023-03-05 16:38:49|DisSimilarityAttributeReduction|fertility_Diagnosis|0.14|{0, 1, 2, 4}|0.84|0.14516282081604004
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.16|{8, 0, 4, 6}|0.8|0.14238333702087402
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.18|{8, 0, 4, 6}|0.8|0.14437270164489746
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.19999999999999998|{8, 0, 4, 6}|0.79|0.14690756797790527
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.21999999999999997|{0, 1, 2, 4}|0.85|0.1533951759338379
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.23999999999999996|{0, 8, 4, 6}|0.8|0.1518394947052002
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.25999999999999995|{0, 1, 5, 6}|0.77|0.1525895595550537
+2023-03-05 16:38:50|DisSimilarityAttributeReduction|fertility_Diagnosis|0.27999999999999997|{0, 1, 5, 6}|0.77|0.14364862442016602
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.3|{0, 1, 5, 6}|0.78|0.1448662281036377
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.32|{0, 1, 5, 6}|0.78|0.15154099464416504
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.34|{0, 1, 4, 7}|0.78|0.14352774620056152
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.36000000000000004|{0, 5, 6, 7}|0.66|0.1513659954071045
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.38000000000000006|{0, 5, 6, 7}|0.66|0.14922356605529785
+2023-03-05 16:38:51|DisSimilarityAttributeReduction|fertility_Diagnosis|0.4000000000000001|{0, 2, 3, 4, 5, 6}|0.73|0.15759944915771484
