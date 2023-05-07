@@ -109,15 +109,15 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
     elif stopCondition == "FULL":
         neighbors = generateNeighbor(X, list(AT), radius)
         fullAttrSetScore = len(getPos(decClasses, neighbors))
-        print(fullAttrSetScore)
-        while True: # 添加属性的过程
+        # print(fullAttrSetScore)
+        while True:  # 添加属性的过程
             candidateAttrSet = AT - A
-            curScore =  -100
+            curScore = -100
             selectedAttr = 0
             for a in candidateAttrSet:
                 neighbors = generateNeighbor(X, list(A|set([a])), radius)
                 tmpScore = len(getPos(decClasses, neighbors))
-                if tmpScore>=curScore:
+                if tmpScore >= curScore:
                     curScore = tmpScore
                     selectedAttr = a
 
@@ -148,21 +148,12 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
 
 if __name__ == "__main__":
     # print("你好世界")
-    path = '../DataSet_TEST/{}.csv'.format("wine")
+    path = '../DataSet_TEST/ori/{}.csv'.format("wdbc")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-1]
     X = MinMaxScaler().fit_transform(X)  # 归一化取值均归为0-1之间
     Y = data[:, -1]
-    # print(Y==0.0)
-
-    # 对Y进行处理
-    uniqueVal = np.unique(Y)
-    for i in range(len(uniqueVal)-1, -1, -1):
-        Y[Y==uniqueVal[i]] = i+1
-    Y = Y.astype(int)
-    # print(type(X))
-    # exit()
 
     red = reductionUseNeighborhoodRoughSet(X, Y, 0.1, "FULL")
     print(red)

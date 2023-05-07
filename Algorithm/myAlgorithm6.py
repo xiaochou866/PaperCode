@@ -115,7 +115,7 @@ def sortAttrByOd(X: np.ndarray, decClasses: dict)->list[float]:
     return odScores  # 返回的是各个属性所对应的od的取值
 
 
-def getRankedAttrs(X:np.ndarray, Y:np.ndarray)->list[int]:
+def getRankedAttrsByOd(X:np.ndarray, Y:np.ndarray)->list[int]:
     '''
     :param X: 数据集的条件属性部分
     :param Y: 数据集的决策属性部分
@@ -125,6 +125,28 @@ def getRankedAttrs(X:np.ndarray, Y:np.ndarray)->list[int]:
     odScores = sortAttrByOd(X, decClasses)  # 得到每一个属性的od得分
     sortedAttrs = np.argsort(odScores)
     return list(sortedAttrs)
+
+def sortAttrByMulti(X:np.ndarray, Y:np.ndarray, proportions):
+    sampleNum, attrNum = X.shape
+    multiScores = [0] * attrNum
+    clusterNums, granuleSampleNumThresholds = getGranules(sampleNum, proportions)
+
+    # _, _, testScore = getMultiGranleClusterByKeamns(X, Y, list([3, 5, 9, 10, 13]), clusterNums,granuleSampleNumThresholds)
+    # print(testScore)
+    # exit()
+    for i in range(attrNum):
+        _, _, multiScores[i] = getMultiGranleClusterByKeamns(X, Y, list([i]), clusterNums,
+                                                                            granuleSampleNumThresholds)
+    # print(multiScores)
+    # exit()
+    return multiScores
+
+
+def getRankedAttrsByMulti(X:np.ndarray, Y:np.ndarray, proprotions)->list[int]:
+    multiScores = sortAttrByMulti(X, Y, proprotions)
+    sortedAttrs = np.argsort(multiScores)
+    return list(sortedAttrs)
+
 # endregion
 
 # region 针对某个条件属性集 通过初次聚类 多次合并的方式生成多个粒度下的聚类结果
@@ -314,9 +336,11 @@ def acceAttrRedByMultiGranleKMeans(X:np.ndarray, Y:np.ndarray, proportions: list
 
     all = set(range(attrNum))
     _,_, allAttrMultiClusterStrucScore = getMultiGranleClusterByKeamns(X, Y, list(all), clusterNums, granuleSampleNumThresholds)
-    # print("全属性集下多粒度聚类结构的得分为{}".format(allAttrMultiClusterStrucScore))
-    rankedAttrs = getRankedAttrs(X, Y) # 排序之后的属性的list
+    print("全属性集下多粒度聚类结构的得分为{}".format(allAttrMultiClusterStrucScore))
+    # rankedAttrs = getRankedAttrsByOd(X, Y) # 排序之后的属性的list
+    rankedAttrs = getRankedAttrsByMulti(X, Y, proportions) # 排序之后的属性的list
     start_time = time.time()  # 程序开始时间
+
     # 获得了排序了的属性之后 现进行一些属性的预选择
     red = set()
     red.add(rankedAttrs[0]) # 默认会添加一个属性
@@ -326,14 +350,14 @@ def acceAttrRedByMultiGranleKMeans(X:np.ndarray, Y:np.ndarray, proportions: list
         if multiClusterStrucScore>curScore:
             red.add(attr)
             curScore = multiClusterStrucScore
-        # print("当前属性集合{}下的多粒度聚类结构的得分为{}".format(red, curScore))
+        print("当前属性集合{}下的多粒度聚类结构的得分为{}".format(red, curScore))
 
     # 删除多余属性的过程
     prepareDelAttr = list(red)
     finScore = curScore
     for attr in prepareDelAttr:
         multiClusterStrucArr, multiClusterSampleNumArr, multiClusterStrucScore = getMultiGranleClusterByKeamns(X, Y, list(red-set([attr])), clusterNums, granuleSampleNumThresholds)
-        if multiClusterStrucScore>curScore:
+        if multiClusterStrucScore>finScore:
             finScore = multiClusterStrucScore
             red = red-set([attr])
             if len(red)==1: break
@@ -365,7 +389,7 @@ if __name__ == "__main__":
                 'wdbc', 'diamonds_filter', 'australian', 'BreastCancer', 'diabetes',
                 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
 
-    path = '../DataSet_TEST/ori/{}.csv'.format("Sonar")
+    path = '../DataSet_TEST/ori/{}.csv'.format("iris")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-1]

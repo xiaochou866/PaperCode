@@ -1,18 +1,16 @@
 import numpy as np
-import pandas as pd
 import datetime
+import json
 import os
+from sklearn.model_selection import KFold
 from sklearn.preprocessing import MinMaxScaler
 
-# 将要进行实验的所有对比算法
-from Algorithm.compareAlgorithm0 import reductionUseNeighborhoodRoughSet
 from Algorithm.compareAlgorithm1 import reductionUseAttributeGroup
+from Algorithm.compareAlgorithm3 import reductionUseWeightedNeighborhood
 from Algorithm.compareAlgorithm2_1 import reductionUseDisSimilarity
 from Algorithm.compareAlgorithm2_2 import reductionUseSimilarity
-from Algorithm.compareAlgorithm3 import reductionUseWeightedNeighborhood
-from Algorithm.compareAlgorithm4 import reductionUseVariableRadiusNeighborhoodRoughSet
-from Algorithm.compareAlgorithm5 import reductionUseRandomSampling
 
+# https://huaweicloud.csdn.net/637f7c9edacf622b8df85fef.html?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-1-116241388-blog-120377395.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-1-116241388-blog-120377395.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=2
 def generateRadiusArr(startRadius:float, endRadius:float, interval:float):
     '''
     :param startRadius: 实验的起始半径
@@ -27,91 +25,112 @@ def generateRadiusArr(startRadius:float, endRadius:float, interval:float):
         curRadius += interval
     return radiusArr
 
+# 用于生成五折交叉验证的x的索引
+def generateFoldXindex(sampleNum:int, foldNum:int):
+    '''
+    :param sampleNum: 该数据集的样本数量
+    :param foldNum: 进行数据集划分的折数
+    :return: 各个不同论域
+    '''
+    trainIndexArr = []
+    kf = KFold(n_splits=foldNum, shuffle=False)
+    for train_index, test_index in kf.split(list(range(sampleNum))):  # 调用split方法切分数据
+        trainIndexArr.append(train_index)
+    return trainIndexArr
 
-# # 根据数据详情获取将要进行实验的所有数据集的名字的列表
-# df = pd.read_excel("../DataSet_TEST/{}".format("数据详情-基于样本数升序.xlsx"))
-# print(df["数据集"].tolist())
 
 
 if __name__ == "__main__":
-    # 设置将要进行实验的半径
-    expRadius = generateRadiusArr(0.02, 0.42, 0.02) # 设置实验半径为 0.02, 0.04, ... ,0.4 这20个半径
+    # 设置将要进行实验的数据集
+    # dataNames = ["iris", "wine", "Ionosphere", "Glass", "data_banknote", "Sonar", "fertility-Diagnosis", "accent", "plrx", "wdbc",  "movement", "BreastTissue"]
+    # dataNames = ["iris", "wine", "Ionosphere", "Glass", "data_banknote", "Sonar", "fertility-Diagnosis", "accent", "plrx", "wdbc",  "movement", "BreastTissue"]
+    # dataNames = ["iris", "wine", "Ionosphere", "Glass", "data_banknote"]
+    # dataNames = ["iris", "wine", "Ionosphere"]
+    dataNames = [ "Glass", "data_banknote", "Sonar"]
+    # dataNames = [ "accent", "plrx", "wdbc",  "movement", "BreastTissue"]
 
-    # 设置将要进行实验的所有数据集
-    # dataNames = ['fertility_Diagnosis', 'BreastTissue', 'Iris']  # 预先测试的三个小数据集
-    dataNames = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx', 'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
-        'PimaIndiansDiabetes', 'Ionosphere', 'movement', 'vote', 'musk', 'wdbc', 'diamonds_filter', 'australian',
-        'BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
-    # 运行到BreastCancer了 继续遇到数据集有缺失报错 修正数据集继续进行实验
-    # dataNames = ['BreastCancer', 'diabetes', 'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
+    algorithmName = "compareAlgorithm3"
 
-
-    # 设置将要进行实验的所有算法
-    # algorithms = []
-    # algorithmName = "NeighborhoodRoughSet" # 对应算法0
-    # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
-    # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
-    # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
-    # algorithmName = "WeightedAttributeReduction" # 对应算法3
-    algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
-    # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
-
-
-    # 优先级 算法>数据集>半径
-    storeDirPath = os.path.join(os.path.abspath("../Res"), "exp1", "compareAlgorithms", "compareAlgorithm4")
-
-    # 检查特定的文件是否存在 如果不存在则创建文件 如果存在则往文件中追加写结果
-    if not os.path.exists(storeDirPath):  # os模块判断并创建
-        os.makedirs(storeDirPath)
-
+    # 优先级 算法>数据集>折>半径
     for dataName in dataNames:
         # 根据数据名读取数据 并对x进行归一化处理
         path = '../DataSet_TEST/{}.csv'.format(dataName)
         data = np.loadtxt(path, delimiter=",", skiprows=1)
-        sampelNum, attrNum = data.shape
+        sampelNum = data.shape[0]
+        x = data[:, :-1]
+        x = MinMaxScaler().fit_transform(x)  # 归一化取值均归为0-1之间
+        y = data[:, -1]
+        y = y.astype(np.int)
 
-        X = data[:, :-1]
-        X = MinMaxScaler().fit_transform(X)  # 归一化取值均归为0-1之间
-        Y = data[:, -1]
+        # 根据样本总数和折数 划分不同的论域
+        foldNum = 5
+        trainIndexArr = generateFoldXindex(sampelNum, foldNum)
+
+        # 指定起始半径 终止半径 和 间隔 生成将要进行实验的半径
+        radiusArr = generateRadiusArr(0.04, 0.4, 0.04)
+
+        for i in range(foldNum):
+            foldName = "第{}折".format(i+1)
+            indexs = trainIndexArr[i]
+            foldX = x[indexs,:]
+            foldY = y[indexs]
+
+            for radius in radiusArr:
+                res = reductionUseWeightedNeighborhood(dataName, radius, "POS", "PRE", foldX, foldY)
+                print(res)
+                # 对结果进行记录
+                # 算法 以文件夹名进行标识
+                # 数据集名: dataName 以文件夹名进行标识
+                # 折: i+1
+                # 半径: radius
+                # 约简: res[0]
+                # 得分: res[1]
+                # 时间: res[2]
+                # 日期: 记录结果产生的时间
+                resDict = dict()
+                resDict["algorithm"] = algorithmName
+                resDict["radius"] = radius
+                resDict["dataSet"] = dataName
+                resDict["fold"] = i+1
+                resDict["red"] = list(res[0])
+                resDict["score"] = res[1]
+                resDict["runtime"] = res[2]
+                resDict["date"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+                # 检查特定的文件是否存在 如果不存在则创建文件 如果存在则往文件中追加写结果
+                dirName = os.path.join(os.path.abspath("../Res"), "compareAlgorithm", algorithmName)
+                if not os.path.exists(dirName):  # os模块判断并创建
+                    os.makedirs(dirName)
+
+                fileName = os.path.join(dirName, dataName + ".json")
+                if not os.path.exists(fileName):
+                    with open(fileName, "w", encoding="utf-8")as f:
+                        jsonStr = {foldName:[]}
+                        jsonStr[foldName].append(resDict)
+                        json.dump(jsonStr, f, ensure_ascii=False)
+                else:
+                    with open(fileName, "r+", encoding="utf-8")as f: # 默认会进行追加
+                        jsonStr = json.load(f)
+                        if foldName not in jsonStr:
+                            jsonStr[foldName] = []
+                        jsonStr[foldName].append(resDict)
+
+                        # 读完 调整位置再写
+                        f.seek(0)
+                        f.truncate()
+                        json.dump(jsonStr, f, ensure_ascii=False)
 
 
-        for radius in expRadius:
-            # 需要进行记录的信息
-            # 结果生成时间, 算法名称, 数据集名称, 约简结果, 依赖度, 约简时间
-            # nowTime, algorithmName, dataName, red, score, runTime
-            nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-            # 指定属性约简的算法
-            # red, score, runTime = reductionUseNeighborhoodRoughSet(X, Y, radius, "PRE") # 对应算法0 基于邻域粗糙集的属性约简
-            # red, score, runTime = reductionUseAttributeGroup(dataName, radius, "POS", "PRE", X, Y) # 对应算法1 基于属性分组的属性约简
-            # red, score, runTime = reductionUseDisSimilarity(dataName, radius, "POS", "PRE", X, Y) # 对应算法2-1 基于差异度的属性约简
-            # red, score, runTime = reductionUseSimilarity(dataName, radius, "POS", "PRE", X, Y) # 对应算法2-2 基于相似度的属性约简
-            # red, score, runTime = reductionUseWeightedNeighborhood(dataName, radius, "POS", "PRE", X, Y) # 对应算法3 基于属性权重的的属性约简
-            red, score, runTime = reductionUseVariableRadiusNeighborhoodRoughSet(X, Y, radius) # 对应算法4 基于变邻域半径的属性约简
-            # red, score, runTime = reductionUseRandomSampling(X, Y, radius, "PRE") # 对应算法5 基于随机样本分组的属性约简
-
-            resList = [nowTime, algorithmName, dataName, radius, red, score, runTime]
-            resList = [str(e) for e in resList]
-            print(resList)
-
-            fileName = os.path.join(storeDirPath, dataName + ".csv")
-            if not os.path.exists(fileName):
-                with open(fileName, "w", encoding="utf-8")as f:
-                    f.write("结果生成时间|算法名称|数据集名称|半径|约简结果|依赖度|约简时间\n")
-                    f.write("|".join(resList)+"\n")
-            else:
-                with open(fileName, "a", encoding="utf-8")as f: # 默认会进行追加
-                    f.write("|".join(resList)+"\n")
 
 
-    # res = reductionUseAttributeGroup("plrx", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]]) 1
+    # res = reductionUseAttributeGroup("plrx", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]])
     # print(res)
 
-    # res = reductionUseWeightedNeighborhood("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]]) 3
+    # res = reductionUseWeightedNeighborhood("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]])
     # print(res)
 
-    # res = reductionUseDisSimilarity("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]]) 2-1
+    # res = reductionUseDisSimilarity("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]])
     # print(res)
 
-    # res = reductionUseSimilarity("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]]) 2-2
+    # res = reductionUseSimilarity("iris", 0.2, "POS", "PRE", x[trainIndexArr[0],:], y[trainIndexArr[0]])
     # print(res)
