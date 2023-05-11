@@ -67,24 +67,27 @@ if __name__ == "__main__":
     expRadius = generateRadiusArr(0.02, 0.42, 0.02) # 设置实验半径为 0.02, 0.04, ... ,0.4 这20个半径
 
     # 设置将要进行实验的算法
-    algorithmName = "NeighborhoodRoughSet" # 对应算法0
+    # algorithmName = "NeighborhoodRoughSet" # 对应算法0
     # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
     # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
-    # algorithmName = "WeightedAttributeReduction" # 对应算法3
+    algorithmName = "WeightedAttributeReduction" # 对应算法3
     # algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
     # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
 
-    algorithmName = "algorithm0" # 对应算法0
+    # algorithmName = "algorithm0" # 对应算法0
     # algorithmName = "algorithm1" # 对应算法1
     # algorithmName = "algorithm2_1" # 对应算法2-1
     # algorithmName = "algorithm2_2" # 对应算法2-2
-    # algorithmName = "algorithm3" # 对应算法3
+    algorithmName = "algorithm3" # 对应算法3
     # algorithmName = "algorithm4" # 对应算法4
     # algorithmName = "algorithm5" # 对应算法5
 
     # 设置将要进行实验的数据种类
-    category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[6]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[7]  # 指定数据的类别 每次专注于一种类别的数据集
+    category = dataCategory[8]  # 指定数据的类别 每次专注于一种类别的数据集
 
 
     # # 优先级 算法>数据集>半径
@@ -152,7 +155,6 @@ if __name__ == "__main__":
                 with open(fileName, "w", encoding="utf-8") as f:
                     f.write("结果生成时间|算法名称|数据集种类|数据集名称|半径|约简结果|原始数据属性长度|约简之后属性长度|属性集得分|运行时间|5折KNN准确率|5折SVM准确率|5折CART准确率|KNN平均准确率|SVM平均准确率|CART平均准确率\n")
                     f.write("|".join(resList) + "\n")
-                    print("写入成功")
             else:
                 with open(fileName, "a", encoding="utf-8") as f:  # 默认会进行追加
                     f.write("|".join(resList) + "\n")
