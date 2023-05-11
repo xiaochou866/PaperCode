@@ -58,33 +58,41 @@ if __name__ == "__main__":
     # 展示将要进行实验的所有数据集
     dir = "../DataSet_TEST"
     dataCategory = ["ori", "1fold", "2fold", "3fold", "4fold", "5fold", "10noise", "20noise", "30noise"]
-    dataSet = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx',
-                'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
-                'PimaIndiansDiabetes', 'Ionosphere', 'movement', 'vote', 'musk',
-                'wdbc', 'diamonds_filter', 'australian', 'BreastCancer', 'diabetes',
-                'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
+    # dataSet = ['fertility_Diagnosis', 'BreastTissue', 'Iris', 'wine', 'plrx',
+    #             'GlaucomaM', 'Sonar', 'seeds', 'Glass', 'accent',
+    #             'PimaIndiansDiabetes', 'Ionosphere', 'movement', 'vote', 'musk',
+    #             'wdbc', 'diamonds_filter', 'australian', 'BreastCancer', 'diabetes',
+    #             'pima', 'College', 'Vehicle', 'german', 'data_banknote', 'waveform']
+
+
+
     # 设置将要进行实验的半径
     expRadius = generateRadiusArr(0.02, 0.42, 0.02) # 设置实验半径为 0.02, 0.04, ... ,0.4 这20个半径
+    # expRadius = generateRadiusArr(0.30, 0.42, 0.02) # 设置实验半径为 0.02, 0.04, ... ,0.4 这20个半径
+
 
     # 设置将要进行实验的算法
-    algorithmName = "NeighborhoodRoughSet" # 对应算法0
+    # algorithmName = "NeighborhoodRoughSet" # 对应算法0
     # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
     # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
     # algorithmName = "WeightedAttributeReduction" # 对应算法3
     # algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
-    # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
+    algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
 
-    algorithmName = "algorithm0" # 对应算法0
+    # algorithmName = "algorithm0" # 对应算法0
     # algorithmName = "algorithm1" # 对应算法1
     # algorithmName = "algorithm2_1" # 对应算法2-1
     # algorithmName = "algorithm2_2" # 对应算法2-2
     # algorithmName = "algorithm3" # 对应算法3
     # algorithmName = "algorithm4" # 对应算法4
-    # algorithmName = "algorithm5" # 对应算法5
+    algorithmName = "algorithm5" # 对应算法5
 
     # 设置将要进行实验的数据种类
-    category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[6]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[7]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[8]  # 指定数据的类别 每次专注于一种类别的数据集
 
 
     # # 优先级 算法>数据集>半径
@@ -133,6 +141,7 @@ if __name__ == "__main__":
             elif algorithmName == "algorithm5":
                 red, score, runTime = reductionUseRandomSampling(X, Y, radius, "PRE") # 对应算法5 基于随机样本分组的属性约简
 
+            # print("属性约简结果为:{}".format(red))
             knnScore, svmScore, cartScore = getClassificationAccuracy(oriX, oriY, red)
             nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             resList = [nowTime, algorithmName, category, dataName, radius,
