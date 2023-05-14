@@ -69,25 +69,32 @@ if __name__ == "__main__":
     # 设置将要进行实验的算法
     # algorithmName = "NeighborhoodRoughSet" # 对应算法0
     # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
-    # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
+    algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
-    algorithmName = "WeightedAttributeReduction" # 对应算法3
+    # algorithmName = "WeightedAttributeReduction" # 对应算法3
     # algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
     # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
 
     # algorithmName = "algorithm0" # 对应算法0
     # algorithmName = "algorithm1" # 对应算法1
-    # algorithmName = "algorithm2_1" # 对应算法2-1
+    algorithmName = "algorithm2_1" # 对应算法2-1
     # algorithmName = "algorithm2_2" # 对应算法2-2
-    algorithmName = "algorithm3" # 对应算法3
+    # algorithmName = "algorithm3" # 对应算法3
     # algorithmName = "algorithm4" # 对应算法4
     # algorithmName = "algorithm5" # 对应算法5
 
     # 设置将要进行实验的数据种类
     # category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # 五折的数据集
+    # category = dataCategory[1]  # 指定数据的类别 每次专注于一种类别的数据集
+    category = dataCategory[2]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[3]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[4]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[5]  # 指定数据的类别 每次专注于一种类别的数据集
+    # 加了10 20 30噪声的数据集
     # category = dataCategory[6]  # 指定数据的类别 每次专注于一种类别的数据集
     # category = dataCategory[7]  # 指定数据的类别 每次专注于一种类别的数据集
-    category = dataCategory[8]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[8]  # 指定数据的类别 每次专注于一种类别的数据集
 
 
     # # 优先级 算法>数据集>半径
