@@ -320,7 +320,7 @@ def forwardAttrRedByMultiGranleKMeans(X: np.ndarray, Y: np.ndarray):
 if __name__ == "__main__":
     dataSet = ["iris", "wine", "Glass", "plrx", "wdbc", "seeds", "BreastTissue"]
     # path = '../DataSet_TEST/{}.csv'.format("Sonar") # 只选出一个属性 所以这里需要改造
-    path = '../DataSet_TEST/{}.csv'.format("wdbc")
+    path = '../DataSet_TEST/ori/{}.csv'.format("wdbc")
     data = np.loadtxt(path, delimiter=",", skiprows=1)
 
     X = data[:, :-2]
