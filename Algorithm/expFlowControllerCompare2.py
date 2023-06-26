@@ -79,7 +79,7 @@ if __name__ == "__main__":
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
     # algorithmName = "WeightedAttributeReduction" # 对应算法3
     # algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
-    algorithmName = "VariableRadiusNeighborhoodRoughSet2" # 对应算法4
+    # algorithmName = "VariableRadiusNeighborhoodRoughSet2" # 对应算法4
     # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
 
     # algorithmName = "algorithm0" # 对应算法0

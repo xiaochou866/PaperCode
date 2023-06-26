@@ -1,3 +1,5 @@
+import time
+
 from sklearn.preprocessing import MinMaxScaler
 from scipy.spatial.distance import cdist
 from util.ReductUtil import *
@@ -111,6 +113,7 @@ def reductionUseNearestNeighborhood(X: np.ndarray, Y: np.ndarray, k: int, thelta
     U = set(range(sampelNum))
     V = U  # 使得论域不断缩减
 
+    start_time = time.time()  # 程序开始时间
     while True:  # 每次进入循环尝试选择一个最优价值的属性
         curScore = 0
         selectedAttr = 0
@@ -136,7 +139,9 @@ def reductionUseNearestNeighborhood(X: np.ndarray, Y: np.ndarray, k: int, thelta
 
         red.add(selectedAttr)
         V = V - curPos
-    return red
+    end_time = time.time()  # 程序结束时间
+    run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
+    return red, 0 , run_time_sec
 
 
 if __name__ == "__main__":
