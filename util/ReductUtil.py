@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 import os
 
 import numpy as np
-from scipy.spatial.distance import squareform, pdist
+from scipy.spatial.distance import squareform, pdist, cdist
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -60,6 +60,26 @@ def generateDisMatrix(X: np.ndarray, cols: list = None, W: np.ndarray = None) ->
     return ret
 
 
+def generateDisMatrixPartUWithAll(X: np.ndarray, partIdx: list[int], cols: list = None) -> np.ndarray:
+    '''
+    :param X: 数据集的条件属性部分
+    :param partIdx: 部分样本的索引情况
+    :param cols: 参与计算的所有属性
+    :return: 计算给定partIdx与所有样本之间两两的距离矩阵
+    '''
+
+    if cols != None:
+        X1 = X[partIdx]
+        X1 = X1[:, cols]
+        X2 = X[:, cols]
+    else:
+        X1 = X[partIdx]
+        X2 = X
+
+    ret = cdist(X1, X2, metric="euclidean")
+    return ret
+
+
 def generateNeighbor(disMatrix: np.ndarray, radius: float) -> list[np.ndarray]:
     '''
     :param disMatrix: 距离矩阵
@@ -76,6 +96,18 @@ def generateNeighbor(disMatrix: np.ndarray, radius: float) -> list[np.ndarray]:
 
 
 # ----------------------------------------------------------------------------------------------------------------------
+def checkSampleInPos(neighbor: np.ndarray, decClasses: list[np.ndarray]) -> bool:
+    '''
+    :param neighbor: 某一个样本的邻域
+    :param decClasses: 所有的决策类
+    :return: 如果该样本的邻域完全落在一个决策类里面 说明该样本属于正域 返回True 否则返回false
+    '''
+    for decClass in decClasses:
+        if isContain(neighbor, decClass):
+            return True
+    return False
+
+
 def getPOS(neighbors: list[np.ndarray], decClasses: list[np.ndarray], *args) -> int:
     '''
     :param neighbors: 各个样本点的邻域关系

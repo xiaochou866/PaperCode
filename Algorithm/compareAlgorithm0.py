@@ -4,15 +4,16 @@ import numpy as np
 from scipy.spatial.distance import squareform, pdist
 from sklearn.preprocessing import MinMaxScaler
 
-# classic neighbor rough set
 
-def generateNeighbor(X:np.ndarray, attrSet:list[int], radius: float) -> dict:
+# Hu Q, Yu D, Liu J, et al. Neighborhood rough set based heterogeneous feature subset selection[J]. Information sciences, 2008, 178(18): 3577-3594.
+
+def generateNeighbor(X: np.ndarray, attrSet: list[int], radius: float) -> dict:
     '''
     :param disMatrix: 距离矩阵
     :param radius:  用来生成邻域的半径
     :return:  字典 键:对象索引 值:该对象所生成邻域中的对象
     '''
-    disMatrix = generateDisMatrixUnderAttrSet(X, attrSet) # 生成该属性集之下的各个样本之间的距离矩阵
+    disMatrix = generateDisMatrixUnderAttrSet(X, attrSet)  # 生成该属性集之下的各个样本之间的距离矩阵
     neighbors = dict()
     n, _ = disMatrix.shape
     for i in range(n):
@@ -21,7 +22,7 @@ def generateNeighbor(X:np.ndarray, attrSet:list[int], radius: float) -> dict:
     return neighbors
 
 
-def generateDecisionClasses(Y:np.ndarray):
+def generateDecisionClasses(Y: np.ndarray):
     '''
     :param Y: 数据集的决策属性部分
     :return: 各个决策类的集合
@@ -29,8 +30,9 @@ def generateDecisionClasses(Y:np.ndarray):
     decClasses = dict()
     decValues = np.unique(Y)
     for decValue in decValues:
-        decClasses[decValue] = set(np.where(Y==decValue)[0])
+        decClasses[decValue] = set(np.where(Y == decValue)[0])
     return decClasses
+
 
 # 写一个函数 可以计算出数据集中每两个样本 在某一个属性子集上的距离
 def generateDisMatrixUnderAttrSet(X: np.ndarray, attrSet: list[int]) -> np.array:
@@ -64,7 +66,8 @@ def getPos(decisionClasses: dict, neighbors: dict) -> list:
     # print("条件属性集相对于决策属性集的重要度为:",len(posBD)/conditionData.shape[0])
     return posBD
 
-def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=0.2, stopCondition:str="PRE"):
+
+def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius: float = 0.2, stopCondition: str = "PRE"):
     start_time = time.time()  # 程序开始时间
 
     # 从数据集中获取相关信息
@@ -73,7 +76,7 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
     A = set()
     AT = set(range(attrNum))
 
-    if stopCondition == "PRE": # 添加属性之后得到的正域比上一次正域中的样本数量多就认为该属性是有效的加入其中
+    if stopCondition == "PRE":  # 添加属性之后得到的正域比上一次正域中的样本数量多就认为该属性是有效的加入其中
         preScore = -100
         while True:
             curScore = -100
@@ -97,12 +100,12 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
         while True:
             nextA = A
             for a in A:
-                neighbors = generateNeighbor(X, list(A-set([a])), radius)
+                neighbors = generateNeighbor(X, list(A - set([a])), radius)
                 tmpScore = len(getPos(decClasses, neighbors))
-                if tmpScore>=preScore:
-                    nextA = nextA-set([a])
-                    break # 每次只删除一个属性
-            if len(A)==1 or nextA==A:
+                if tmpScore >= preScore:
+                    nextA = nextA - set([a])
+                    break  # 每次只删除一个属性
+            if len(A) == 1 or nextA == A:
                 break
             A = nextA
 
@@ -115,7 +118,7 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
             curScore = -100
             selectedAttr = 0
             for a in candidateAttrSet:
-                neighbors = generateNeighbor(X, list(A|set([a])), radius)
+                neighbors = generateNeighbor(X, list(A | set([a])), radius)
                 tmpScore = len(getPos(decClasses, neighbors))
                 if tmpScore >= curScore:
                     curScore = tmpScore
@@ -124,18 +127,18 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
             # print("现在属性集合得分为:", curScore)
             A.add(selectedAttr)
 
-            if curScore>=fullAttrSetScore:
+            if curScore >= fullAttrSetScore:
                 break
         # 删除属性的过程 如果从选出的属性集A中去除属性之后仍然满足约束就可以将一个属性从A中删除
         while True:
             nextA = A
             for a in A:
-                neighbors = generateNeighbor(X, list(A-set([a])), radius)
+                neighbors = generateNeighbor(X, list(A - set([a])), radius)
                 tmpScore = len(getPos(decClasses, neighbors))
-                if tmpScore>=fullAttrSetScore:
-                    nextA = nextA-set([a])
-                    break # 每次只删除一个属性
-            if len(A)==1 or nextA==A:
+                if tmpScore >= fullAttrSetScore:
+                    nextA = nextA - set([a])
+                    break  # 每次只删除一个属性
+            if len(A) == 1 or nextA == A:
                 break
             A = nextA
 
@@ -143,7 +146,7 @@ def reductionUseNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, radius:float=
     run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
     # print(run_time_sec)
 
-    return A, preScore/sampleNum if stopCondition=="PRE" else curScore/sampleNum, run_time_sec
+    return A, preScore / sampleNum if stopCondition == "PRE" else curScore / sampleNum, run_time_sec
 
 
 if __name__ == "__main__":

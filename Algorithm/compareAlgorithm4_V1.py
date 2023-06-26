@@ -7,6 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 # Variable radius neighborhood rough sets and attribure reduction
+# Zhang D, Zhu P. Variable radius neighborhood rough sets and attribute reduction[J]. International Journal of Approximate Reasoning, 2022, 150: 98-121.
 
 def generateNeighbor(disMatrix: np.array, radius: float) -> dict:
     '''
@@ -35,7 +36,7 @@ def generateVariableRadiusNeighbor(disMatrix: np.array, radiusArr: list[float]) 
     return neighbors
 
 
-def generateNewNeighbor(X:np.ndarray, decClasses, attrSet:list[int], delta:float, la:float)->dict:
+def generateNewNeighbor(X: np.ndarray, decClasses, attrSet: list[int], delta: float, la: float) -> dict:
     disMatrix = generateDisMatrixUnderAttrSet(X, attrSet)
     neighbors = generateNeighbor(disMatrix, delta)
     radiusArr = generateVariableRadius(neighbors, decClasses, delta, la)
@@ -44,7 +45,7 @@ def generateNewNeighbor(X:np.ndarray, decClasses, attrSet:list[int], delta:float
     return newNeighbors
 
 
-def generateDecisionClasses(Y:np.ndarray):
+def generateDecisionClasses(Y: np.ndarray):
     '''
     :param Y: 数据集的决策属性部分
     :return: 各个决策类的集合
@@ -52,8 +53,9 @@ def generateDecisionClasses(Y:np.ndarray):
     decClasses = dict()
     decValues = np.unique(Y)
     for decValue in decValues:
-        decClasses[decValue] = set(np.where(Y==decValue)[0])
+        decClasses[decValue] = set(np.where(Y == decValue)[0])
     return decClasses
+
 
 # 写一个函数 可以计算出数据集中每两个样本 在某一个属性子集上的距离
 def generateDisMatrixUnderAttrSet(X: np.ndarray, attrSet: list[int]) -> np.array:
@@ -65,10 +67,11 @@ def generateDisMatrixUnderAttrSet(X: np.ndarray, attrSet: list[int]) -> np.array
     distMatrix = squareform(pdist(X[:, attrSet], metric='euclidean'))
     return distMatrix
 
+
 def calNumerator(Dx: list[int]):
     numerator = 0
-    for i in range(len(Dx)-1):
-        for j in range(i+1, len(Dx)):
+    for i in range(len(Dx) - 1):
+        for j in range(i + 1, len(Dx)):
             numerator += abs(len(Dx[i]) - len(Dx[j]))
     return numerator
 
@@ -77,19 +80,20 @@ def generateVariableRadius(neigobors, decClasses, delta, la):
     radiusArr = [0] * len(neigobors)
     for i in range(len(neigobors)):
         neighborSampleNum = len(neigobors[i])
-        Dx = [set()]*len(decClasses)
+        Dx = [set()] * len(decClasses)
         px = 0
-        for j in range(1,len(decClasses)+1):
-            Dx[j-1] = neigobors[i] & decClasses[j]
-            if len(Dx[j-1])!=0:
-                px +=1
+        for j in range(1, len(decClasses) + 1):
+            Dx[j - 1] = neigobors[i] & decClasses[j] if j in decClasses else set()
+            if len(Dx[j - 1]) != 0:
+                px += 1
         numerator = calNumerator(Dx)
-        if px ==1:
+        if px == 1:
             radiusArr[i] = delta
         else:
-            SB = numerator/(math.comb(px, 2)*neighborSampleNum+0.01)
-            radiusArr[i] = delta*np.exp(-1*la*SB)
+            SB = numerator / (math.comb(px, 2) * neighborSampleNum + 0.01)
+            radiusArr[i] = delta * np.exp(-1 * la * SB)
     return radiusArr
+
 
 #   约简算法1
 def getPos(decisionClasses: dict, neighbors: dict) -> list:
@@ -112,7 +116,8 @@ def getPos(decisionClasses: dict, neighbors: dict) -> list:
     # print("条件属性集相对于决策属性集的重要度为:",len(posBD)/conditionData.shape[0])
     return posBD
 
-def reductionUseVariableRadiusNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, delta:float=0.2, la:float=0.5):
+
+def reductionUseVariableRadiusNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray, delta: float = 0.2, la: float = 0.5):
     # 从数据集中获取相关信息
     sampleNum, attrNum = X.shape
     decClasses = generateDecisionClasses(Y)
@@ -143,7 +148,7 @@ def reductionUseVariableRadiusNeighborhoodRoughSet(X: np.ndarray, Y: np.ndarray,
     end_time = time.time()  # 程序结束时间
     run_time_sec = end_time - start_time  # 程序的运行时间，单位为秒
 
-    return A, preScore/sampleNum, run_time_sec
+    return A, preScore / sampleNum, run_time_sec
 
 
 if __name__ == "__main__":

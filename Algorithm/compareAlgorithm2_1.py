@@ -10,6 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 from util.ReductUtil import *  # 求取属性约简常用的一些函数
 
 # 文献: Feature Selection Based on Neighborhood Discrimination Index (disSimilarity)
+# Rao X, Yang X, Yang X, et al. Quickly calculating reduct: an attribute relationship based approach[J]. Knowledge-Based Systems, 2020, 200: 106014.
 
 def getTwoAttrKnowledgeDistance(sampleNum: int, neighborRelation1: list[np.ndarray],
                                 neighborRelation2: list[np.ndarray]) -> float:

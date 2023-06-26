@@ -15,6 +15,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # 文献: Attribute group for attribute reduction
+# Chen Y, Liu K, Song J, et al. Attribute group for attribute reduction[J]. Information Sciences, 2020, 535: 64-80.
 
 def generateAttrGroup(X: np.ndarray) -> list[list[int]]:
     '''

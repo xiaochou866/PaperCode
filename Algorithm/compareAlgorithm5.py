@@ -1,5 +1,5 @@
 # Random Sampling for Attribure Reduction(RSAR)
-
+# Chen Z, Liu K, Yang X, et al. Random sampling accelerator for attribute reduction[J]. International Journal of Approximate Reasoning, 2022, 140: 75-91.
 
 import math
 import time

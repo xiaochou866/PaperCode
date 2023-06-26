@@ -14,7 +14,8 @@ from Algorithm.compareAlgorithm1 import reductionUseAttributeGroup
 from Algorithm.compareAlgorithm2_1 import reductionUseDisSimilarity
 from Algorithm.compareAlgorithm2_2 import reductionUseSimilarity
 from Algorithm.compareAlgorithm3 import reductionUseWeightedNeighborhood
-from Algorithm.compareAlgorithm4 import reductionUseVariableRadiusNeighborhoodRoughSet
+from Algorithm.compareAlgorithm4_V1 import reductionUseVariableRadiusNeighborhoodRoughSet
+from Algorithm.compareAlgorithm4_V2 import reductionUseVariableRadiusNeighborhoodRoughSet2
 from Algorithm.compareAlgorithm5 import reductionUseRandomSampling
 
 def getXY(path: str):
@@ -76,20 +77,27 @@ if __name__ == "__main__":
     # algorithmName = "AttributeGroupAttributeReduction" # 对应算法1
     # algorithmName = "DisSimilarityAttributeReduction" # 对应算法2-1
     # algorithmName = "SimilarityAttributeReduction" # 对应算法2-2
-    algorithmName = "WeightedAttributeReduction" # 对应算法3
+    # algorithmName = "WeightedAttributeReduction" # 对应算法3
     # algorithmName = "VariableRadiusNeighborhoodRoughSet" # 对应算法4
+    algorithmName = "VariableRadiusNeighborhoodRoughSet2" # 对应算法4
     # algorithmName = "RandomSamplingAttribureReduction" # 对应算法5
 
     # algorithmName = "algorithm0" # 对应算法0
     # algorithmName = "algorithm1" # 对应算法1
     # algorithmName = "algorithm2_1" # 对应算法2-1
     # algorithmName = "algorithm2_2" # 对应算法2-2
-    algorithmName = "algorithm3" # 对应算法3
+    # algorithmName = "algorithm3" # 对应算法3
     # algorithmName = "algorithm4" # 对应算法4
+    algorithmName = "algorithm4_v2" # 对应算法4版本2
     # algorithmName = "algorithm5" # 对应算法5
 
     # 设置将要进行实验的数据种类
     category = dataCategory[0]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[1]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[2]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[3]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[4]  # 指定数据的类别 每次专注于一种类别的数据集
+    # category = dataCategory[5]  # 指定数据的类别 每次专注于一种类别的数据集
     # category = dataCategory[6]  # 指定数据的类别 每次专注于一种类别的数据集
     # category = dataCategory[7]  # 指定数据的类别 每次专注于一种类别的数据集
     # category = dataCategory[8]  # 指定数据的类别 每次专注于一种类别的数据集
@@ -138,6 +146,8 @@ if __name__ == "__main__":
                 red, score, runTime = reductionUseWeightedNeighborhood(data, radius, "POS", "PRE", X, Y) # 对应算法3 基于属性权重的的属性约简
             elif algorithmName == "algorithm4":
                 red, score, runTime = reductionUseVariableRadiusNeighborhoodRoughSet(X, Y, radius)  # 对应算法4 基于变邻域半径的属性约简
+            elif algorithmName == "algorithm4_v2":
+                red, score, runTime = reductionUseVariableRadiusNeighborhoodRoughSet2(X, Y, radius)  # 对应算法4 基于变邻域半径的属性约简
             elif algorithmName == "algorithm5":
                 red, score, runTime = reductionUseRandomSampling(X, Y, radius, "PRE") # 对应算法5 基于随机样本分组的属性约简
 

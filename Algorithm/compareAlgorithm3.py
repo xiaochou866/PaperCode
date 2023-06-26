@@ -9,6 +9,7 @@ from util.ReductUtil import *  # 求取属性约简常用的一些函数
 from sklearn import preprocessing
 
 # 文献: A novel approach to attribute reduction based on weighted
+# Hu M, Tsang E C C, Guo Y, et al. A novel approach to attribute reduction based on weighted neighborhood rough sets[J]. Knowledge-Based Systems, 2021, 220: 106908.
 
 def generateAttrWeightVector(A: np.ndarray, Y: np.ndarray) -> np.ndarray:
     '''

@@ -1,4 +1,5 @@
 # Data-guided multi-granularity selector for attribute reduction
+# Jiang Z, Dou H, Song J, et al. Data-guided multi-granularity selector for attribute reduction[J]. Applied Intelligence, 2021, 51: 876-888.
 
 import math
 import time
